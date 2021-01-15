@@ -1,60 +1,44 @@
-import Head from "next/head";
-import Link from "next/link";
+import { useRouter } from 'next/router';
 
-import styles from "../styles/Home.module.css";
+import styles from './index.module.css';
+import Head from '../components/Head';
+import Card from '../components/Card';
 
-export default function Home() {
+export default function Home(): JSX.Element {
+  const router = useRouter();
+
+  const navigate = (to: string) => {
+    router.push(to);
+  };
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Vermintide - Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <Head pageTitle="Vermintide - Home" />
       <main className={styles.main}>
         <h1 className={styles.title}>Vermintide</h1>
-
         <div className={styles.grid}>
-          <Link href="/about">
-            <section className={styles.card}>
-              <h3>About</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
-            </section>
-          </Link>
-
-          <Link href="/songs">
-            <section className={styles.card}>
-              <h3>Songs</h3>
-              <p>
-                Rerum quibusdam tenetur saepe itaque! Aliquam corporis ea
-                officia
-              </p>
-            </section>
-          </Link>
-
-          <Link href="/lyrics">
-            <section className={styles.card}>
-              <h3>Lyrics</h3>
-              <p>
-                Ad exercitationem blanditiis deleniti accusamus harum laborum
-              </p>
-            </section>
-          </Link>
-
-          <Link href="/events">
-            <section className={styles.card}>
-              <h3>Events</h3>
-              <p>
-                Ad exercitationem blanditiis deleniti accusamus harum laborum
-              </p>
-            </section>
-          </Link>
+          <Card
+            title="About"
+            subtitle="Lorem ipsum dolor sit amet consectetur, adipisicing elit"
+            onClick={() => navigate('/about')}
+          />
+          <Card
+            title="Songs"
+            subtitle="Rerum quibusdam tenetur saepe itaque! Aliquam corporis eaofficia"
+            onClick={() => navigate('/songs')}
+          />
+          <Card
+            title="Lyrics"
+            subtitle="Ad exercitationem blanditiis deleniti accusamus harum laborum"
+            onClick={() => navigate('/lyrics')}
+          />
+          <Card
+            title="Events"
+            subtitle="Ad exercitationem blanditiis deleniti accusamus harum laborum"
+            onClick={() => navigate('/events')}
+          />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <p>Link to Spotify</p>
-      </footer>
     </div>
   );
 }
