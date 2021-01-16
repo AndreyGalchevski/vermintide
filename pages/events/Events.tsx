@@ -5,7 +5,10 @@ import StyledMain from '../../components/StyledMain/StyledMain';
 export default function Events(): JSX.Element {
   return (
     <StyledContainer>
-      <Head pageTitle="Vermintide - Events" />
+      <Head
+        pageTitle="Vermintide - Events"
+        pageDescription="Past and future events and gigs by Vermintide"
+      />
       <StyledMain>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi maiores iste
         corporis? Quo voluptates deleniti laborum totam nostrum nesciunt. Facilis veniam harum eius,

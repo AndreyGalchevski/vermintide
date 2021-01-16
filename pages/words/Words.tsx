@@ -5,7 +5,10 @@ import StyledMain from '../../components/StyledMain/StyledMain';
 export default function Words(): JSX.Element {
   return (
     <StyledContainer>
-      <Head pageTitle="Vermintide - Words" />
+      <Head
+        pageTitle="Vermintide - Words"
+        pageDescription="List of song lyrics from Vermintide's debut EP: 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Plague, 8 - Humanity self-portrait"
+      />
       <StyledMain>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex velit debitis vero sed
         reprehenderit obcaecati ipsa placeat, veritatis sint explicabo nemo blanditiis, voluptatum
