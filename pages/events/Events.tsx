@@ -1,6 +1,4 @@
-import Head from '../../components/Head';
-import StyledContainer from '../../components/StyledContainer';
-import StyledMain from '../../components/StyledMain/StyledMain';
+import { Head, StyledContainer, StyledMain } from '../../components';
 
 export default function Events(): JSX.Element {
   return (

@@ -1,10 +1,6 @@
 import { useRouter } from 'next/router';
 
-import Head from '../components/Head';
-import Card from '../components/Card';
-import StyledContainer from '../components/StyledContainer';
-import StyledMain from '../components/StyledMain/StyledMain';
-import Grid from '../components/Grid';
+import { Head, Card, StyledContainer, StyledMain, Grid } from '../components';
 
 export default function Home(): JSX.Element {
   const router = useRouter();

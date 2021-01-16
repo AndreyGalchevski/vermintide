@@ -7,7 +7,6 @@ const StyledFooter = styled.footer`
   height: 5vh;
   background-color: white;
   color: black;
-  z-index: 99;
 `;
 
 export default StyledFooter;
