@@ -37,13 +37,9 @@ class MyDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap"
-            rel="stylesheet"
-          />
+          <link href="/fonts/style.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />
