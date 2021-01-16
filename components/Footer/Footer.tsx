@@ -1,9 +1,9 @@
-import styles from './Footer.module.css';
+import StyledFooter from './Footer.styled';
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className={styles.footer}>
+    <StyledFooter>
       <p>Links to Spotify, Facebook and Bandcamp</p>
-    </footer>
+    </StyledFooter>
   );
 }

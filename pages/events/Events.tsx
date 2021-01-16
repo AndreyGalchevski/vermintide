@@ -1,17 +1,18 @@
-import styles from './Events.module.css';
 import Head from '../../components/Head';
+import StyledContainer from '../../components/StyledContainer';
+import StyledMain from '../../components/StyledMain/StyledMain';
 
 export default function Events(): JSX.Element {
   return (
-    <div className={styles.container}>
+    <StyledContainer>
       <Head pageTitle="Vermintide - Events" />
-      <main className={styles.main}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex velit debitis vero sed
-        reprehenderit obcaecati ipsa placeat, veritatis sint explicabo nemo blanditiis, voluptatum
-        rem, dolores fugit sit? Accusamus, sit commodi. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Incidunt voluptatum mollitia vero eligendi ad, velit qui unde at debitis
-        harum accusantium? Officiis dicta reiciendis deserunt maiores atque animi provident amet.
-      </main>
-    </div>
+      <StyledMain>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi maiores iste
+        corporis? Quo voluptates deleniti laborum totam nostrum nesciunt. Facilis veniam harum eius,
+        atque cumque optio sapiente deleniti, dolor vero beatae reiciendis expedita quam cum quaerat
+        repellat? Tempore assumenda, illum eveniet quo quibusdam laborum ipsa totam aspernatur vitae
+        molestias, tempora ab iste fuga aliquam quaerat
+      </StyledMain>
+    </StyledContainer>
   );
 }

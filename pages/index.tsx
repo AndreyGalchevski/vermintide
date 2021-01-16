@@ -1,8 +1,10 @@
 import { useRouter } from 'next/router';
 
-import styles from './index.module.css';
 import Head from '../components/Head';
 import Card from '../components/Card';
+import StyledContainer from '../components/StyledContainer';
+import StyledMain from '../components/StyledMain/StyledMain';
+import Grid from '../components/Grid';
 
 export default function Home(): JSX.Element {
   const router = useRouter();
@@ -12,11 +14,10 @@ export default function Home(): JSX.Element {
   };
 
   return (
-    <div className={styles.container}>
+    <StyledContainer>
       <Head pageTitle="Vermintide - Home" />
-      <main className={styles.main}>
-        <h1 className={styles.title}>Vermintide</h1>
-        <div className={styles.grid}>
+      <StyledMain>
+        <Grid>
           <Card
             title="Sounds"
             subtitle="Rerum quibusdam tenetur saepe itaque! Aliquam corporis eaofficia"
@@ -37,8 +38,8 @@ export default function Home(): JSX.Element {
             subtitle="Ad exercitationem blanditiis deleniti accusamus harum laborum"
             onClick={() => navigate('/events')}
           />
-        </div>
-      </main>
-    </div>
+        </Grid>
+      </StyledMain>
+    </StyledContainer>
   );
 }

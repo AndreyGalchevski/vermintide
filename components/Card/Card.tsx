@@ -1,4 +1,4 @@
-import styles from './Card.module.css';
+import { StyledCard, CardTitle, CardSubtitle } from './Card.styled';
 
 interface Props {
   title: string;
@@ -8,15 +8,9 @@ interface Props {
 
 export default function Card({ title, subtitle, onClick }: Props): JSX.Element {
   return (
-    <section
-      className={styles.card}
-      onClick={onClick}
-      role="button"
-      onKeyPress={onClick}
-      tabIndex={0}
-    >
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
-    </section>
+    <StyledCard onClick={onClick} role="button" onKeyPress={onClick} tabIndex={0}>
+      <CardTitle>{title}</CardTitle>
+      <CardSubtitle>{subtitle}</CardSubtitle>
+    </StyledCard>
   );
 }
