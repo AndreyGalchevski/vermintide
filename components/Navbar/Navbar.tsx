@@ -3,16 +3,16 @@ import Link from 'next/link';
 export default function Navbar(): JSX.Element {
   return (
     <nav>
-      <Link href="/about">
-        <a>About</a>
+      <Link href="/sounds">
+        <a>Sounds</a>
       </Link>
 
-      <Link href="/songs">
-        <a>Songs</a>
+      <Link href="/words">
+        <a>Words</a>
       </Link>
 
-      <Link href="/lyrics">
-        <a>Lyrics</a>
+      <Link href="/meanings">
+        <a>Meanings</a>
       </Link>
 
       <Link href="/events">

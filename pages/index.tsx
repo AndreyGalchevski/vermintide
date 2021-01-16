@@ -18,19 +18,19 @@ export default function Home(): JSX.Element {
         <h1 className={styles.title}>Vermintide</h1>
         <div className={styles.grid}>
           <Card
-            title="About"
-            subtitle="Lorem ipsum dolor sit amet consectetur, adipisicing elit"
-            onClick={() => navigate('/about')}
-          />
-          <Card
-            title="Songs"
+            title="Sounds"
             subtitle="Rerum quibusdam tenetur saepe itaque! Aliquam corporis eaofficia"
-            onClick={() => navigate('/songs')}
+            onClick={() => navigate('/sounds')}
           />
           <Card
-            title="Lyrics"
+            title="Words"
             subtitle="Ad exercitationem blanditiis deleniti accusamus harum laborum"
-            onClick={() => navigate('/lyrics')}
+            onClick={() => navigate('/words')}
+          />
+          <Card
+            title="Meanings"
+            subtitle="Ad exercitationem blanditiis deleniti accusamus harum laborum"
+            onClick={() => navigate('/meanings')}
           />
           <Card
             title="Events"

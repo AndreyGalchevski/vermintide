@@ -1,10 +1,10 @@
-import styles from './Songs.module.css';
+import styles from './Sounds.module.css';
 import Head from '../../components/Head';
 
-export default function Songs(): JSX.Element {
+export default function Sounds(): JSX.Element {
   return (
     <div className={styles.container}>
-      <Head pageTitle="Vermintide - Songs" />
+      <Head pageTitle="Vermintide - Sounds" />
       <main className={styles.main}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eligendi maiores iste
         corporis? Quo voluptates deleniti laborum totam nostrum nesciunt. Facilis veniam harum eius,
