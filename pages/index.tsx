@@ -15,7 +15,7 @@ export default function Home(): JSX.Element {
 
   return (
     <StyledContainer>
-      <Head pageTitle="Vermintide - Home" />
+      <Head pageTitle="Vermintide - Home" pageDescription="Vermintide Official Website Home Page" />
       <StyledMain>
         <Grid>
           <Card
