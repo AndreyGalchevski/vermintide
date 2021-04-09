@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledMain = styled.div`
+const MainSection = styled.div`
   padding: 5rem 0;
   flex: 1;
   display: flex;
@@ -9,4 +9,4 @@ const StyledMain = styled.div`
   align-items: center;
 `;
 
-export default StyledMain;
+export default MainSection;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Head, Social, StyledContainer, StyledMain } from '../components';
+import { Head, Social, Container, MainSection } from '../components';
 
 const Logo = styled.img`
   width: 100%;
@@ -10,16 +10,16 @@ const Logo = styled.img`
 
 export default function Home(): JSX.Element {
   return (
-    <StyledContainer>
+    <Container>
       <Head
         path=""
         pageTitle="Vermintide - Home"
         pageDescription="Vermintide Official Website Home Page"
       />
-      <StyledMain>
+      <MainSection>
         <Logo src="/logo.png" />
         <Social />
-      </StyledMain>
-    </StyledContainer>
+      </MainSection>
+    </Container>
   );
 }

@@ -1,4 +1,4 @@
-import { Head, StyledContainer, StyledMain } from '../../components';
+import { Head, Container, MainSection } from '../../components';
 
 interface Visual {
   name: string;
@@ -22,13 +22,13 @@ export default function Visuals(): JSX.Element {
   // ];
 
   return (
-    <StyledContainer>
+    <Container>
       <Head
         path="/visuals"
         pageTitle="Vermintide - Visuals"
         pageDescription="List of songs from Vermintide's debut EP 'Destroyers in nature': 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Depression maze, 8 - The plague"
       />
-      <StyledMain>
+      <MainSection>
         {visuals.length === 0 ? (
           <div>
             <p>No visuals yet</p>
@@ -47,7 +47,7 @@ export default function Visuals(): JSX.Element {
             ))}
           </div>
         )}
-      </StyledMain>
-    </StyledContainer>
+      </MainSection>
+    </Container>
   );
 }

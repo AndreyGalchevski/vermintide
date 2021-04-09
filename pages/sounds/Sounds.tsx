@@ -1,4 +1,4 @@
-import { Head, StyledContainer, StyledMain } from '../../components';
+import { Head, Container, MainSection } from '../../components';
 import SoundsContainer, { SoundEmbed } from './Sounds.styled';
 
 interface Sound {
@@ -23,13 +23,13 @@ export default function Sounds(): JSX.Element {
   // ];
 
   return (
-    <StyledContainer>
+    <Container>
       <Head
         path="/sounds"
         pageTitle="Vermintide - Sounds"
         pageDescription="List of songs from Vermintide's debut EP 'Destroyers in nature': 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Depression maze, 8 - The plague"
       />
-      <StyledMain>
+      <MainSection>
         {sounds.length === 0 ? (
           <div>
             <p>No sounds yet</p>
@@ -48,7 +48,7 @@ export default function Sounds(): JSX.Element {
             ))}
           </SoundsContainer>
         )}
-      </StyledMain>
-    </StyledContainer>
+      </MainSection>
+    </Container>
   );
 }

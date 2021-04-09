@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -9,4 +9,4 @@ const StyledContainer = styled.div`
   align-items: center;
 `;
 
-export default StyledContainer;
+export default Container;
