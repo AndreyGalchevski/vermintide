@@ -28,8 +28,8 @@ export default function Menu({ open }: Props): JSX.Element {
         <MenuItem isActive={isActivePath('/words')}>Words</MenuItem>
       </Link>
 
-      <Link href="/meanings">
-        <MenuItem isActive={isActivePath('/meanings')}>Meanings</MenuItem>
+      <Link href="/visuals">
+        <MenuItem isActive={isActivePath('/visuals')}>Visuals</MenuItem>
       </Link>
 
       <Link href="/events">
