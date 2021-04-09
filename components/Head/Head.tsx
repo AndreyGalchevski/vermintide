@@ -1,11 +1,12 @@
 import NextHead from 'next/head';
 
 interface Props {
+  path: string;
   pageTitle: string;
   pageDescription: string;
 }
 
-export default function Head({ pageTitle, pageDescription }: Props): JSX.Element {
+export default function Head({ path, pageTitle, pageDescription }: Props): JSX.Element {
   return (
     <NextHead>
       <title>{pageTitle}</title>
@@ -14,7 +15,7 @@ export default function Head({ pageTitle, pageDescription }: Props): JSX.Element
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={pageDescription} />
 
-      <meta name="og:url" content="http://vermintide.herokuapp.com" />
+      <meta name="og:url" content={`http://vermintide.herokuapp.com${path}`} />
       <meta name="og:type" content="website" />
       <meta name="og:site_name" content="Vermintide - Official Website" />
       <meta name="og:title" content={pageTitle} />

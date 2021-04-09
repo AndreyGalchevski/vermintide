@@ -11,7 +11,11 @@ const Logo = styled.img`
 export default function Home(): JSX.Element {
   return (
     <StyledContainer>
-      <Head pageTitle="Vermintide - Home" pageDescription="Vermintide Official Website Home Page" />
+      <Head
+        path=""
+        pageTitle="Vermintide - Home"
+        pageDescription="Vermintide Official Website Home Page"
+      />
       <StyledMain>
         <Logo src="/logo.png" />
         <Social />

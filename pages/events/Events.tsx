@@ -4,6 +4,7 @@ export default function Events(): JSX.Element {
   return (
     <StyledContainer>
       <Head
+        path="/events"
         pageTitle="Vermintide - Events"
         pageDescription="Past and future events and gigs by Vermintide"
       />

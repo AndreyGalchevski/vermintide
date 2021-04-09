@@ -4,6 +4,7 @@ export default function Sounds(): JSX.Element {
   return (
     <StyledContainer>
       <Head
+        path="/sounds"
         pageTitle="Vermintide - Sounds"
         pageDescription="List of songs from Vermintide's debut EP: 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Plague, 8 - Humanity self-portrait"
       />
