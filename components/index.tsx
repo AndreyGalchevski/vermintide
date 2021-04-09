@@ -6,5 +6,6 @@ import Head from './Head';
 import Menu from './Menu';
 import StyledContainer from './StyledContainer';
 import StyledMain from './StyledMain';
+import Social from './Social';
 
-export { Burger, Card, Footer, Grid, Head, Menu, StyledContainer, StyledMain };
+export { Burger, Card, Footer, Grid, Head, Menu, StyledContainer, StyledMain, Social };
