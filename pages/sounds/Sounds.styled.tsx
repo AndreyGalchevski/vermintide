@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SoundsContainer = styled.div`
+const SoundsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 30px 15px;
@@ -15,3 +15,5 @@ export const SoundEmbed = styled.iframe`
   align-items: center;
   border-radius: 10px;
 `;
+
+export default SoundsContainer;

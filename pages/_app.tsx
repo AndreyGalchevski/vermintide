@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { useRef, useState } from 'react';
 
-import theme from './theme';
+import theme from '../utils/theme';
 import GlobalStyles from './global';
 import { Footer, Burger, Menu } from '../components';
 import useOnClickOutside from '../hooks/useOnClickOutside';
@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <GlobalStyles />
         <div ref={burgerMenuRef}>
           <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} />
+          <Menu open={open} setOpen={setOpen} />
         </div>
         <Component {...pageProps} />
         <Footer />

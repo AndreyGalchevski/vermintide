@@ -1,5 +1,5 @@
 import { Head, StyledContainer, StyledMain } from '../../components';
-import { SoundEmbed, SoundsContainer } from './Sounds.styled';
+import SoundsContainer, { SoundEmbed } from './Sounds.styled';
 
 interface Sound {
   name: string;
