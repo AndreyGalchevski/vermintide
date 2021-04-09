@@ -1,4 +1,5 @@
 import { Head, Container, MainSection } from '../../components';
+import VisualsContainer, { VisualEmbed } from './Visuals.styled';
 
 interface Visual {
   name: string;
@@ -7,18 +8,18 @@ interface Visual {
 
 export default function Visuals(): JSX.Element {
   const visuals: Array<Visual> = [];
-  // const sounds: Array<Sound> = [
-  //   { name: 'abc1', url: 'https://open.spotify.com/embed/track/1GYxVWtdmNaRCjkYkXlTYB' },
+  // const visuals: Array<Visual> = [
+  //   { name: 'abc1', url: 'https://www.youtube.com/embed/NMkffkfl00U' },
   // ];
-  // const sounds: Array<Sound> = [
-  //   { name: 'abc1', url: 'https://open.spotify.com/embed/track/1GYxVWtdmNaRCjkYkXlTYB' },
-  //   { name: 'abc2', url: 'https://open.spotify.com/embed/track/5wWikZnOM0fEeFxCF3AnuD' },
-  //   { name: 'abc3', url: 'https://open.spotify.com/embed/track/1GYxVWtdmNaRCjkYkXlTYB' },
-  //   { name: 'abc4', url: 'https://open.spotify.com/embed/track/5wWikZnOM0fEeFxCF3AnuD' },
-  //   { name: 'abc5', url: 'https://open.spotify.com/embed/track/1GYxVWtdmNaRCjkYkXlTYB' },
-  //   { name: 'abc6', url: 'https://open.spotify.com/embed/track/5wWikZnOM0fEeFxCF3AnuD' },
-  //   { name: 'abc7', url: 'https://open.spotify.com/embed/track/1GYxVWtdmNaRCjkYkXlTYB' },
-  //   { name: 'abc8', url: 'https://open.spotify.com/embed/track/5wWikZnOM0fEeFxCF3AnuD' },
+  // const visuals: Array<Visual> = [
+  //   { name: 'abc1', url: 'https://www.youtube.com/embed/NMkffkfl00U' },
+  //   { name: 'abc2', url: 'https://www.youtube.com/embed/2AIzRgegl9o' },
+  //   { name: 'abc3', url: 'https://www.youtube.com/embed/NMkffkfl00U' },
+  //   { name: 'abc4', url: 'https://www.youtube.com/embed/2AIzRgegl9o' },
+  //   { name: 'abc5', url: 'https://www.youtube.com/embed/NMkffkfl00U' },
+  //   { name: 'abc6', url: 'https://www.youtube.com/embed/2AIzRgegl9o' },
+  //   { name: 'abc7', url: 'https://www.youtube.com/embed/NMkffkfl00U' },
+  //   { name: 'abc8', url: 'https://www.youtube.com/embed/2AIzRgegl9o' },
   // ];
 
   return (
@@ -26,7 +27,7 @@ export default function Visuals(): JSX.Element {
       <Head
         path="/visuals"
         pageTitle="Vermintide - Visuals"
-        pageDescription="List of songs from Vermintide's debut EP 'Destroyers in nature': 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Depression maze, 8 - The plague"
+        pageDescription="List of various videos released by Vermintide"
       />
       <MainSection>
         {visuals.length === 0 ? (
@@ -34,18 +35,19 @@ export default function Visuals(): JSX.Element {
             <p>No visuals yet</p>
           </div>
         ) : (
-          <div>
+          <VisualsContainer>
             {visuals.map((visual) => (
-              <iframe
+              <VisualEmbed
                 key={visual.name}
                 title={visual.name}
                 src={visual.url}
                 frameBorder="0"
-                allow="encrypted-media"
-                height="232"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen={true}
+                height="432"
               />
             ))}
-          </div>
+          </VisualsContainer>
         )}
       </MainSection>
     </Container>
