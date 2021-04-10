@@ -11,6 +11,7 @@ interface Props {
 export default function Burger({ open, setOpen }: Props): JSX.Element {
   return (
     <>
+      <Navbar />
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
         <Line open={open} />
         <Line open={open} />

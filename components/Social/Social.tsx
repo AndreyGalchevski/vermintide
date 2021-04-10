@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const LinksContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 25px;
 `;
 
 const SocialLink = styled.a`

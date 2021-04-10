@@ -1,13 +1,14 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { capitalize } from '../../utils/string';
 
-import { StyledNavbar, Logo } from './Navbar.styled';
+import { StyledNavbar } from './Navbar.styled';
 
 export default function Navbar(): JSX.Element {
+  const router = useRouter();
+
   return (
     <StyledNavbar>
-      <Link href="/">
-        <Logo>VERMINTIDE</Logo>
-      </Link>
+      <h3>{capitalize(router.pathname.slice(1))}</h3>
     </StyledNavbar>
   );
 }
