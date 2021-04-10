@@ -8,7 +8,7 @@ export default function Navbar(): JSX.Element {
 
   return (
     <StyledNavbar>
-      <h3>{capitalize(router.pathname.slice(1))}</h3>
+      <h2>{capitalize(router.pathname.slice(1))}</h2>
     </StyledNavbar>
   );
 }

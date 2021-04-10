@@ -24,7 +24,7 @@ export default function Events(): JSX.Element {
       date: new Date(),
       fbEvent: 'https://www.facebook.com/events/268710077533818/',
       image:
-        'https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/84385566_1855283544605678_483841406062821376_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=340051&_nc_ohc=xw1zUHJ_ARgAX_D5_bY&_nc_ht=scontent.fhfa1-1.fna&oh=4c5ee6da72264077e6d551fc9b702289&oe=6096AAE9t',
+        'https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/84385566_1855283544605678_483841406062821376_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=340051&_nc_ohc=xw1zUHJ_ARgAX_D5_bY&_nc_ht=scontent.fhfa1-1.fna&oh=4c5ee6da72264077e6d551fc9b702289&oe=6096AAE9',
     },
     {
       name: 'Grind you to death',
@@ -74,8 +74,8 @@ export default function Events(): JSX.Element {
           <EventsContainer>
             {events.map((event) => (
               <EventCard key={event.name}>
+                <EventImage src={event.image} />
                 <div style={{ padding: '0px 16px' }}>
-                  <EventImage src={event.image} />
                   <h2>{event.name}</h2>
                   <time>
                     {dayNames[event.date.getDay()]}, {monthNames[event.date.getMonth()]}{' '}
