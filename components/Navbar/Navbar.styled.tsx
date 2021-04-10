@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledNavbar = styled.nav`
-  position: fixed;
+  position: absolute;
+  top: 3%;
   display: flex;
   flex-direction: row;
   align-items: center;
