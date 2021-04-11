@@ -20,19 +20,31 @@ const SocialIcon = styled.img`
 export default function Social(): JSX.Element {
   return (
     <LinksContainer>
-      <SocialLink href="https://www.facebook.com/vermintide.band" target="_blank">
+      <SocialLink href="https://www.facebook.com/vermintide.band" target="_blank" rel="noreferrer">
         <SocialIcon src="/facebook.svg" alt="Facebook icon" />
       </SocialLink>
-      <SocialLink href="https://music.apple.com/il/artist/vermintide/1474119907" target="_blank">
+      <SocialLink
+        href="https://music.apple.com/il/artist/vermintide/1474119907"
+        target="_blank"
+        rel="noreferrer"
+      >
         <SocialIcon src="/itunes.svg" alt="iTunes icon" />
       </SocialLink>
-      <SocialLink href="https://www.instagram.com/virmintide.band" target="_blank">
+      <SocialLink href="https://www.instagram.com/virmintide.band" target="_blank" rel="noreferrer">
         <SocialIcon src="/instagram.svg" alt="Instagram icon" />
       </SocialLink>
-      <SocialLink href="https://open.spotify.com/artist/5lPVe4olWXVhRKMceEPqgs" target="_blank">
+      <SocialLink
+        href="https://open.spotify.com/artist/5lPVe4olWXVhRKMceEPqgs"
+        target="_blank"
+        rel="noreferrer"
+      >
         <SocialIcon src="/spotify.svg" alt="Spotify icon" />
       </SocialLink>
-      <SocialLink href="https://www.youtube.com/channel/UCnscHLfwxs-6kApOiHZMLMQ" target="_blank">
+      <SocialLink
+        href="https://www.youtube.com/channel/UCnscHLfwxs-6kApOiHZMLMQ"
+        target="_blank"
+        rel="noreferrer"
+      >
         <SocialIcon src="/youtube.svg" alt="YouTube icon" />
       </SocialLink>
     </LinksContainer>

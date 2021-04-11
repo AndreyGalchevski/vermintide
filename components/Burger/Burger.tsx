@@ -12,10 +12,10 @@ export default function Burger({ open, setOpen }: Props): JSX.Element {
   return (
     <>
       <Navbar />
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <Line open={open} />
-        <Line open={open} />
-        <Line open={open} />
+      <StyledBurger open={open} onClick={() => setOpen(!open)} aria-label="Side menu button">
+        <Line open={open} aria-hidden="true" />
+        <Line open={open} aria-hidden="true" />
+        <Line open={open} aria-hidden="true" />
       </StyledBurger>
     </>
   );
