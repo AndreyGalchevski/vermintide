@@ -1,4 +1,6 @@
 import { Head, Container, MainSection } from '../../components';
+import { words } from '../../data';
+import WordsContainer, { Content, WordCard } from './Words.styled';
 
 export default function Words(): JSX.Element {
   return (
@@ -6,14 +8,17 @@ export default function Words(): JSX.Element {
       <Head
         path="/words"
         pageTitle="Vermintide - Words"
-        pageDescription="List of song lyrics from Vermintide's debut EP: 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Plague, 8 - Humanity self-portrait"
+        pageDescription="List of song lyrics from Vermintide's debut EP 'Meaningless convulsions': 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The depression maze, 8 - The Plague"
       />
       <MainSection>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex velit debitis vero sed
-        reprehenderit obcaecati ipsa placeat, veritatis sint explicabo nemo blanditiis, voluptatum
-        rem, dolores fugit sit? Accusamus, sit commodi. Loarem ipsum, dolor sit amet consectetur
-        adipisicing elit. Incidunt voluptatum mollitia vero eligendi ad, velit qui unde at debitis
-        harum accusantium? Officiis dicta reiciendis deserunt maiores atque animi provident amet.
+        <WordsContainer>
+          {words.map((word) => (
+            <WordCard key={word.title}>
+              <h2>{word.title}</h2>
+              <Content>{word.content}</Content>
+            </WordCard>
+          ))}
+        </WordsContainer>
       </MainSection>
     </Container>
   );
