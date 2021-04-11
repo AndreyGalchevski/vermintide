@@ -21,19 +21,19 @@ export default function Social(): JSX.Element {
   return (
     <LinksContainer>
       <SocialLink href="https://www.facebook.com/vermintide.band" target="_blank">
-        <SocialIcon src="/facebook.svg" />
+        <SocialIcon src="/facebook.svg" alt="Facebook icon" />
       </SocialLink>
       <SocialLink href="https://music.apple.com/il/artist/vermintide/1474119907" target="_blank">
-        <SocialIcon src="/itunes.svg" />
+        <SocialIcon src="/itunes.svg" alt="iTunes icon" />
       </SocialLink>
       <SocialLink href="https://www.instagram.com/virmintide.band" target="_blank">
-        <SocialIcon src="/instagram.svg" />
+        <SocialIcon src="/instagram.svg" alt="Instagram icon" />
       </SocialLink>
       <SocialLink href="https://open.spotify.com/artist/5lPVe4olWXVhRKMceEPqgs" target="_blank">
-        <SocialIcon src="/spotify.svg" />
+        <SocialIcon src="/spotify.svg" alt="Spotify icon" />
       </SocialLink>
       <SocialLink href="https://www.youtube.com/channel/UCnscHLfwxs-6kApOiHZMLMQ" target="_blank">
-        <SocialIcon src="/youtube.svg" />
+        <SocialIcon src="/youtube.svg" alt="YouTube icon" />
       </SocialLink>
     </LinksContainer>
   );

@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
         pageDescription="Vermintide Official Website Home Page"
       />
       <MainSection>
-        <Logo src="/logo.png" />
+        <Logo src="/logo.png" alt="Vermintide band logo" />
         <Social />
       </MainSection>
     </Container>
