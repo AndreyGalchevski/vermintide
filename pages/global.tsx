@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   html, body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
   }
 
   a {

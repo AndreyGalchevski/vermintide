@@ -11,3 +11,7 @@ export const StyledNavbar = styled.nav`
   width: 100%;
   background-color: ${({ theme }) => theme.primaryLight};
 `;
+
+export const PageName = styled.h2`
+  text-transform: capitalize;
+`;
