@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -11,6 +11,8 @@ const StyledFooter = styled.footer`
   background-color: white;
   color: black;
   font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 export default StyledFooter;
