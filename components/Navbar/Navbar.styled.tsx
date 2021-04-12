@@ -11,8 +11,3 @@ export const StyledNavbar = styled.nav`
   width: 100%;
   background-color: ${({ theme }) => theme.primaryLight};
 `;
-
-export const Logo = styled.a`
-  font-family: 'Bebas Neue', cursive;
-  font-size: 5vh;
-`;
