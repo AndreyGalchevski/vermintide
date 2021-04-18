@@ -18,10 +18,10 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <div ref={burgerMenuRef}>
+        {/* <div ref={burgerMenuRef}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
-        </div>
+        </div> */}
         <Component {...pageProps} />
         <Footer />
       </>
