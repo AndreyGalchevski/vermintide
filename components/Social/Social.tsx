@@ -36,7 +36,7 @@ export default function Social(): JSX.Element {
         <Image src="/spotify.svg" alt="Spotify icon" width="40" height="76" />
       </SocialLink>
       <SocialLink
-        href="https://www.youtube.com/channel/UCnscHLfwxs-6kApOiHZMLMQ"
+        href="https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw"
         target="_blank"
         rel="noreferrer"
       >
