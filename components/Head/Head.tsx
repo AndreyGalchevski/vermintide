@@ -11,12 +11,12 @@ export default function Head({ path, pageTitle, pageDescription }: Props): JSX.E
     <NextHead>
       <title>{pageTitle}</title>
       <link rel="icon" href="/favicon.ico" />
-      <link rel="canonical" href={`http://vermintide.herokuapp.com${path}`} />
+      <link rel="canonical" href={`https://vermintide.band${path}`} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={pageDescription} />
 
-      <meta name="og:url" content={`http://vermintide.herokuapp.com${path}`} />
+      <meta name="og:url" content={`https://vermintide.band${path}`} />
       <meta name="og:type" content="website" />
       <meta name="og:site_name" content="Vermintide - Official Website" />
       <meta name="og:title" content={pageTitle} />
