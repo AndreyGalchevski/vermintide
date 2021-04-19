@@ -7,8 +7,8 @@ export default function Home(): JSX.Element {
     <Container>
       <Head
         path=""
-        pageTitle="Vermintide - Home"
-        pageDescription="Vermintide Official Website Home Page"
+        pageTitle="Vermintide - Grind you the f**k away"
+        pageDescription="Vermintide is a brutal deathgrind collective from Israel"
       />
       <MainSection>
         <Image src="/logo.png" alt="Vermintide band logo" width="600" height="305" />

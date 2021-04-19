@@ -18,15 +18,15 @@ export default function Head({ path, pageTitle, pageDescription }: Props): JSX.E
 
       <meta name="og:url" content={`https://vermintide.band${path}`} />
       <meta name="og:type" content="website" />
-      <meta name="og:site_name" content="Vermintide - Official Website" />
+      <meta name="og:site_name" content="Vermintide" />
       <meta name="og:title" content={pageTitle} />
       <meta name="og:description" content={pageDescription} />
       <meta
         name="og:image"
-        content="https://res.cloudinary.com/dqvimfd8b/image/upload/v1618120314/vermintide/fb-logo.png"
+        content="https://res.cloudinary.com/dqvimfd8b/image/upload/v1618847921/vermintide/og-image.png"
       />
-      <meta name="og:image:height" content="500" />
-      <meta name="og:image:width" content="500" />
+      <meta name="og:image:height" content="1200" />
+      <meta name="og:image:width" content="612" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={pageTitle} />
