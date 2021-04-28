@@ -25,7 +25,7 @@ export default function Social(): JSX.Element {
       >
         <Image src="/itunes.svg" alt="iTunes icon" width="40" height="76" />
       </SocialLink> */}
-      <SocialLink href="https://www.instagram.com/virmintide.band" target="_blank" rel="noreferrer">
+      <SocialLink href="https://www.instagram.com/vermintide.band" target="_blank" rel="noreferrer">
         <Image src="/instagram.svg" alt="Instagram icon" width="40" height="76" />
       </SocialLink>
       {/* <SocialLink
