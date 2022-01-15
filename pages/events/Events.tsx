@@ -1,7 +1,9 @@
 import { Head, Container, MainSection } from '../../components';
 import { events } from '../../data';
-import { dayNames, monthNames } from '../../utils/date';
 import EventsContainer, { EventCard, EventImage } from './Events.styled';
+
+const formatEventDate = (date: Date) =>
+  `${date.toDateString()} • ${date.toTimeString().split(' ')[0].split(':').slice(0, 2).join(':')}`;
 
 export default function Events(): JSX.Element {
   return (
@@ -18,21 +20,19 @@ export default function Events(): JSX.Element {
           </div>
         ) : (
           <EventsContainer>
-            {events.map((event) => (
-              <EventCard key={event.name}>
-                <EventImage src={event.image} />
-                <div style={{ padding: '0px 16px' }}>
-                  <h2>{event.name}</h2>
-                  <time>
-                    {dayNames[event.date.getDay()]}, {monthNames[event.date.getMonth()]}{' '}
-                    {event.date.getDate()} • {event.date.getHours()}:{event.date.getMinutes()}
-                  </time>
+            {events.map(({ name, image, date, city, country, venue, fbEvent }) => (
+              <EventCard key={name}>
+                <EventImage src={image} />
+                <div style={{ padding: '16px 16px' }}>
+                  <h2>{name}</h2>
+                  <time>{formatEventDate(date)}</time>
                   <p>
-                    {event.city}, {event.country}
+                    {city}, {country}
                   </p>
-                  <p>{event.venue}</p>
-                  {/* <p>FB event: {event.fbEvent}</p> */}
-                  {/* <p>image: {event.images}</p> */}
+                  <p>{venue}</p>
+                  <a href={fbEvent} target="_blank" rel="noreferrer">
+                    <b>Event page</b>
+                  </a>
                 </div>
               </EventCard>
             ))}
