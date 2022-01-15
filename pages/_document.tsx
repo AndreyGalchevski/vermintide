@@ -38,7 +38,7 @@ class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head />
         <body>
           <Main />
           <NextScript />

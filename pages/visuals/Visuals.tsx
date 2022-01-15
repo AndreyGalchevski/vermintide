@@ -24,7 +24,7 @@ export default function Visuals(): JSX.Element {
                 src={visual.url}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen={true}
+                allowFullScreen
                 height="432"
               />
             ))}

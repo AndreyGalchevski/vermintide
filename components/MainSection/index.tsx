@@ -1,1 +1,3 @@
-export { default } from './MainSection';
+import MainSection from './MainSection';
+
+export default MainSection;

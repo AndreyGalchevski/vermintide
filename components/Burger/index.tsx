@@ -1,1 +1,3 @@
-export { default } from './Burger';
+import Burger from './Burger';
+
+export default Burger;

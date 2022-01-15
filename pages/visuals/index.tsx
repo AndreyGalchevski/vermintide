@@ -1,1 +1,3 @@
-export { default } from './Visuals';
+import Visuals from './Visuals';
+
+export default Visuals;
