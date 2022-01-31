@@ -4,6 +4,7 @@ const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
   background: ${({ theme }) => theme.primaryDark};
   height: 100vh;
   text-align: left;

@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
     <Container>
       <Head
         path=""
-        pageTitle="Vermintide - Grind you the f**k away"
+        pageTitle="Vermintide - In Grind We Slam"
         pageDescription="Vermintide is a brutal deathgrind collective from Israel"
       />
       <MainSection>

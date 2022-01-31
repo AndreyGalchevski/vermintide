@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Dispatch, SetStateAction } from 'react';
@@ -47,6 +48,20 @@ export default function Menu({ open, setOpen }: Props): JSX.Element {
       <Link href="/events">
         <MenuItem isActive={isActivePath('/events')} onClick={handleMenuItemClick}>
           Events
+        </MenuItem>
+      </Link>
+
+      <Link href="https://www.etsy.com/shop/Vermintide" passHref>
+        <MenuItem isActive={false} target="_blank">
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ marginRight: 5 }}>Shop</span>
+            <Image
+              src="/external-link-alt-solid.svg"
+              alt="External link icon"
+              width="25"
+              height="25"
+            />
+          </div>
         </MenuItem>
       </Link>
     </StyledMenu>
