@@ -4,6 +4,9 @@ import { useRouter } from 'next/router';
 import { Dispatch, SetStateAction } from 'react';
 
 import StyledMenu, { MenuItem } from './Menu.styled';
+import externalLinkIcon from '../../public/external-link-alt-solid.png';
+
+const merchandiseShopURL = 'https://www.etsy.com/shop/Vermintide';
 
 interface Props {
   open: boolean;
@@ -51,16 +54,11 @@ export default function Menu({ open, setOpen }: Props): JSX.Element {
         </MenuItem>
       </Link>
 
-      <Link href="https://www.etsy.com/shop/Vermintide" passHref>
+      <Link href={merchandiseShopURL} passHref>
         <MenuItem isActive={false} target="_blank">
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <span style={{ marginRight: 5 }}>Shop</span>
-            <Image
-              src="/external-link-alt-solid.svg"
-              alt="External link icon"
-              width="25"
-              height="25"
-            />
+            <Image src={externalLinkIcon} alt="External link icon" width="25" height="25" />
           </div>
         </MenuItem>
       </Link>

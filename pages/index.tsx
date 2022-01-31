@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Head, Social, Container, MainSection } from '../components';
+import logoImage from '../public/logo.png';
 
 export default function Home(): JSX.Element {
   return (
@@ -8,10 +9,12 @@ export default function Home(): JSX.Element {
       <Head
         path=""
         pageTitle="Vermintide - In Grind We Slam"
-        pageDescription="Vermintide is a brutal deathgrind collective from Israel"
+        pageDescription="Vermintide is a Brutal Deathgrind collective from Israel"
       />
       <MainSection>
-        <Image src="/logo.png" alt="Vermintide band logo" width="600" height="305" />
+        <div style={{ marginBottom: 10 }}>
+          <Image src={logoImage} alt="Vermintide band logo" placeholder="blur" />
+        </div>
         <Social />
       </MainSection>
     </Container>
