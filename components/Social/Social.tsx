@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 import facebookIcon from '../../public/facebook.png';
-import itunesIcon from '../../public/itunes.png';
 import instagramIcon from '../../public/instagram.png';
 import spotifyIcon from '../../public/spotify.png';
 import youtubeIcon from '../../public/youtube.png';
+import soundcloudIcon from '../../public/soundcloud.png';
+import bandcampIcon from '../../public/bandcamp.png';
 
 const LinksContainer = styled.div`
   display: flex;
@@ -26,13 +27,6 @@ export default function Social(): JSX.Element {
       <SocialLink href="https://www.facebook.com/vermintide.band" target="_blank" rel="noreferrer">
         <Image src={facebookIcon} alt="Facebook icon" />
       </SocialLink>
-      <SocialLink
-        href="https://music.apple.com/il/artist/vermintide/1564671614"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image src={itunesIcon} alt="iTunes icon" />
-      </SocialLink>
       <SocialLink href="https://www.instagram.com/vermintide.band" target="_blank" rel="noreferrer">
         <Image src={instagramIcon} alt="Instagram icon" />
       </SocialLink>
@@ -49,6 +43,12 @@ export default function Social(): JSX.Element {
         rel="noreferrer"
       >
         <Image src={youtubeIcon} alt="YouTube icon" />
+      </SocialLink>
+      <SocialLink href="https://soundcloud.com/vermintide_band" target="_blank" rel="noreferrer">
+        <Image src={soundcloudIcon} alt="SoundCloud icon" />
+      </SocialLink>
+      <SocialLink href="https://vermintide.bandcamp.com" target="_blank" rel="noreferrer">
+        <Image src={bandcampIcon} alt="BandCamp icon" />
       </SocialLink>
     </LinksContainer>
   );

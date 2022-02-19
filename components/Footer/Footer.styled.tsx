@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   bottom: 0;
   width: 100%;
   height: 3vh;
-  background-color: white;
+  background-color: ${({ theme }) => theme.primaryLight};
   color: black;
   font-size: 12px;
   padding-left: 10px;
