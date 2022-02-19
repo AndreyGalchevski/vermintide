@@ -9,7 +9,7 @@ export default function Home(): JSX.Element {
       <Head
         path=""
         pageTitle="Vermintide - In Grind We Slam"
-        pageDescription="Vermintide is a Brutal Deathgrind collective from Israel"
+        pageDescription="Vermintide is a Slamming Deathgrind collective from Israel"
       />
       <MainSection>
         <div style={{ marginBottom: 10 }}>
