@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Document, {
   DocumentContext,
   Html,
@@ -6,10 +7,9 @@ import Document, {
   NextScript,
   DocumentInitialProps,
 } from 'next/document';
-import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
 
-const structuredData = `
+const structuredData = {
   '@context': 'http://schema.org',
   '@type': 'MusicGroup',
   '@id': 'https://musicbrainz.org/artist/455707a4-a273-4b12-a26f-fcd41abef63a',
@@ -72,7 +72,7 @@ const structuredData = `
       roleName: 'drums',
     },
   ],
-`;
+};
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -105,10 +105,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <Script
+          <script
             type="application/ld+json"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{ __html: structuredData }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           />
         </Head>
         <body>
