@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import Document, {
   DocumentContext,
   Html,
@@ -7,7 +6,73 @@ import Document, {
   NextScript,
   DocumentInitialProps,
 } from 'next/document';
+import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
+
+const structuredData = `
+  '@context': 'http://schema.org',
+  '@type': 'MusicGroup',
+  '@id': 'https://musicbrainz.org/artist/455707a4-a273-4b12-a26f-fcd41abef63a',
+  name: 'Vermintide',
+  description: 'Slamming Deathgrind collective from Israel',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://res.cloudinary.com/dqvimfd8b/image/upload/v1618120314/vermintide/fb-logo.png',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://res.cloudinary.com/dqvimfd8b/image/upload/v1645194062/vermintide/IMG_0086.png',
+  },
+  url: 'https://vermintide.band',
+  genre: ['Death Metal', 'Grindcore'],
+  sameAs: [
+    'https://www.facebook.com/vermintide.band',
+    'https://www.instagram.com/vermintide.band',
+    'https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw',
+    'https://soundcloud.com/vermintide_band',
+  ],
+  album: {
+    '@type': 'MusicAlbum',
+    name: 'Meaningless Convulsions',
+    '@id': 'https://musicbrainz.org/release-group/700a41d7-150b-48e2-a6fc-75a6df92f48d',
+    datePublished: '2011',
+  },
+  member: [
+    {
+      '@type': 'OrganizationRole',
+      member: {
+        '@type': 'Person',
+        name: 'Andrey Galchevski',
+      },
+      roleName: 'lead vocals',
+    },
+    {
+      '@type': 'OrganizationRole',
+      member: {
+        '@type': 'Person',
+        name: 'Yaniv Alkalay',
+      },
+      roleName: 'guitar',
+    },
+    {
+      '@type': 'OrganizationRole',
+      member: {
+        '@type': 'Person',
+        name: 'Ido Reuven',
+        givenName: 'Real Name if different',
+      },
+      roleName: 'bass',
+    },
+    {
+      '@type': 'OrganizationRole',
+      member: {
+        '@type': 'Person',
+        name: 'Idan Lupo',
+      },
+      roleName: 'drums',
+    },
+  ],
+`;
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -40,23 +105,13 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                  })(window,document,'script','dataLayer','GTM-TD3F3FL');`,
-            }}
+          <Script
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: structuredData }}
           />
         </Head>
         <body>
-          <noscript
-            dangerouslySetInnerHTML={{
-              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TD3F3FL"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-            }}
-          />
           <Main />
           <NextScript />
         </body>
