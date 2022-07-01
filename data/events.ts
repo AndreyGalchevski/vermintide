@@ -10,11 +10,21 @@ interface Event {
 
 const events: Array<Event> = [
   {
+    name: 'PROCEEDS THE WEEDIAN',
+    venue: 'Z City',
+    city: 'Haifa',
+    country: 'Israel',
+    date: new Date(2022, 7, 13, 20, 0),
+    fbEvent: 'https://www.facebook.com/events/764736801359338',
+    image:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1656678898/vermintide/events/287509664_159301629973542_4750842011531108146_n.png',
+  },
+  {
     name: 'Maalim Shedim 3',
     venue: 'Jan Jack',
     city: 'Tel Aviv',
     country: 'Israel',
-    date: new Date(2022, 6, 9, 20, 0),
+    date: new Date(2022, 5, 9, 20, 0),
     fbEvent: 'https://www.facebook.com/events/291156976474765',
     image:
       'https://res.cloudinary.com/dqvimfd8b/image/upload/v1655548752/vermintide/events/45C38253-CAAD-4A0A-8988-12F146671F5E.jpg',
@@ -24,7 +34,7 @@ const events: Array<Event> = [
     venue: 'Jan Jack',
     city: 'Tel Aviv',
     country: 'Israel',
-    date: new Date(2022, 5, 14, 21, 0),
+    date: new Date(2022, 4, 14, 21, 0),
     fbEvent: 'https://www.facebook.com/events/5111588252240950',
     image:
       'https://res.cloudinary.com/dqvimfd8b/image/upload/v1655549224/vermintide/events/5AD0D111-459D-4F9F-A0BE-3807C6D0B973.jpg',
