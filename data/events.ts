@@ -4,11 +4,21 @@ interface Event {
   city: string;
   country: string;
   date: Date;
-  fbEvent: string;
+  fbEvent?: string;
   image: string;
 }
 
 const events: Array<Event> = [
+  {
+    name: 'Spit Ya Teeth',
+    venue: 'Levontin',
+    city: 'Tel Aviv',
+    country: 'Israel',
+    date: new Date(2022, 7, 19, 20, 0),
+    fbEvent: 'https://www.facebook.com/events/3331730207115917',
+    image:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1658597242/vermintide/events/AB52C2F2-064D-4FF5-BC21-A1A496EF27D0.jpg',
+  },
   {
     name: 'PROCEEDS THE WEEDIAN',
     venue: 'Z City',
@@ -18,6 +28,15 @@ const events: Array<Event> = [
     fbEvent: 'https://www.facebook.com/events/764736801359338',
     image:
       'https://res.cloudinary.com/dqvimfd8b/image/upload/v1656678898/vermintide/events/287509664_159301629973542_4750842011531108146_n.png',
+  },
+  {
+    name: 'ХⒶнзир 666',
+    venue: 'Beit Alpha',
+    city: 'Tel Aviv',
+    country: 'Israel',
+    date: new Date(2022, 7, 12, 20, 0),
+    image:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1658597229/vermintide/events/A7CA046B-9B97-434C-B476-BA829E35E8A7.jpg',
   },
   {
     name: 'Maalim Shedim 3',

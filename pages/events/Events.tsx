@@ -30,9 +30,11 @@ export default function Events(): JSX.Element {
                     {city}, {country}
                   </p>
                   <p>{venue}</p>
-                  <a href={fbEvent} target="_blank" rel="noreferrer">
-                    <b>Event page</b>
-                  </a>
+                  {fbEvent && (
+                    <a href={fbEvent} target="_blank" rel="noreferrer">
+                      <b>Event page</b>
+                    </a>
+                  )}
                 </div>
               </EventCard>
             ))}

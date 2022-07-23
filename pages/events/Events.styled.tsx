@@ -11,7 +11,7 @@ export default EventsContainer;
 
 export const EventImage = styled.img`
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   height: auto;
   border-radius: 10px 10px 0px 0px;
 `;
