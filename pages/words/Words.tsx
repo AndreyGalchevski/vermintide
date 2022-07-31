@@ -4,7 +4,7 @@ import Select, { SingleValue, Options } from 'react-select';
 import { Head, Container, MainSection } from '../../components';
 import { words } from '../../data';
 import { AlbumName } from '../../data/words';
-import { WordsContainer, Content, WordCard } from './Words.styled';
+import WordsContainer, { Content, WordCard } from './Words.styled';
 
 export interface AlbumOption {
   value: AlbumName;

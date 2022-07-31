@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-export const WordsContainer = styled.div`
+const WordsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
+
+export default WordsContainer;
 
 export const WordCard = styled.div`
   color: ${({ theme }) => theme.secondary};

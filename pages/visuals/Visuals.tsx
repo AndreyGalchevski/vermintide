@@ -1,6 +1,6 @@
 import { Head, Container, MainSection } from '../../components';
 import { visuals } from '../../data';
-import { VisualsContainer, HugeVideoIFrame, VideoIFrame, VideoRow } from './Visuals.styled';
+import VisualsContainer, { HugeVideoIFrame, VideoIFrame, VideoRow } from './Visuals.styled';
 
 const Visuals = () => (
   <Container>

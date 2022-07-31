@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { Head, Container, MainSection } from '../../components';
 import { sounds } from '../../data';
-import {
-  SoundsContainer,
+import SoundsContainer, {
   AlbumIFrame,
   AlbumContainer,
   AlbumImage,

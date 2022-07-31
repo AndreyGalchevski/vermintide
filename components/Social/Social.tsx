@@ -1,36 +1,48 @@
-import Image from 'next/image';
-import { FunctionComponent } from 'react';
+import { FunctionComponent, SVGProps } from 'react';
+import styled from 'styled-components';
+
+import FacebookIcon from '../icons/FacebookIcon';
+import InstagramIcon from '../icons/InstagramIcon';
+import MusicIcon from '../icons/MusicIcon';
+import SpotifyIcon from '../icons/SpotifyIcon';
+import YouTubeIcon from '../icons/YouTubeIcon';
+
+export const LinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100px;
+`;
 
 interface SocialLink {
   url: string;
-  iconPath: string;
+  Icon: FunctionComponent<SVGProps<SVGPathElement>>;
   altText: string;
 }
 
 const socialLinks: Array<SocialLink> = [
   {
     url: 'https://open.spotify.com/artist/1qZhVB4v4QVJweTVC3c2uB',
-    iconPath: '/spotify-brands.svg',
+    Icon: SpotifyIcon,
     altText: 'Spotify icon',
   },
   {
     url: 'https://music.apple.com/artist/vermintide/1564671614',
-    iconPath: '/music-solid.svg',
+    Icon: MusicIcon,
     altText: 'Apple Music icon',
   },
   {
     url: 'https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw',
-    iconPath: '/youtube-brands.svg',
+    Icon: YouTubeIcon,
     altText: 'YouTube icon',
   },
   {
     url: 'https://www.instagram.com/vermintide.band',
-    iconPath: '/instagram-brands.svg',
+    Icon: InstagramIcon,
     altText: 'Instagram icon',
   },
   {
     url: 'https://www.facebook.com/vermintide.band',
-    iconPath: '/facebook-brands.svg',
+    Icon: FacebookIcon,
     altText: 'Facebook icon',
   },
 ];
@@ -41,20 +53,20 @@ interface Props {
   iconSize: number;
 }
 
-const Social: FunctionComponent<Props> = ({ iconMargin, iconSize }) => (
-  <>
-    {socialLinks.map(({ url, iconPath, altText }) => (
-      <a key={url} href={url} target="_blank" rel="noreferrer" style={{ margin: iconMargin }}>
-        <Image
-          src={iconPath}
-          height={iconSize}
-          width={iconSize}
-          alt={altText}
-          style={{ color: 'red' }}
-        />
+const Social: FunctionComponent<Props> = ({ variant, iconMargin, iconSize }) => (
+  <LinksContainer>
+    {socialLinks.map(({ url, Icon }) => (
+      <a
+        key={url}
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        style={{ width: iconSize, margin: iconMargin }}
+      >
+        <Icon fill={variant === 'dark' ? 'black' : 'white'} width={iconSize} height={iconSize} />
       </a>
     ))}
-  </>
+  </LinksContainer>
 );
 
 export default Social;

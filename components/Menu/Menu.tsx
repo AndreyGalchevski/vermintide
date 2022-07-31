@@ -63,6 +63,8 @@ const Menu = ({ open, setOpen }: Props) => {
           </div>
         </MenuItem>
       </Link>
+
+      <Social iconMargin={15} variant="light" iconSize={30} />
     </StyledMenu>
   );
 };

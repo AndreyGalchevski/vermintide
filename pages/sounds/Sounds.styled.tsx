@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-export const SoundsContainer = styled.div`
+const SoundsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 30px 15px;
 `;
+
+export default SoundsContainer;
 
 export const AlbumContainer = styled.div`
   display: flex;

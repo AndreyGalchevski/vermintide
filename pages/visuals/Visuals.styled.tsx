@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const VisualsContainer = styled.div`
+const VisualsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 30px 15px;
@@ -10,6 +10,8 @@ export const VisualsContainer = styled.div`
     max-width: 1200px;
   }
 `;
+
+export default VisualsContainer;
 
 export const VideoRow = styled.div`
   flex: 1;

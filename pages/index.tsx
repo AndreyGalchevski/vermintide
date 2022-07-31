@@ -1,14 +1,7 @@
 import Image from 'next/image';
-import styled from 'styled-components';
 
 import { Head, Social, Container, MainSection } from '../components';
 import logoImage from '../public/logo.png';
-
-export const LinksContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 100px;
-`;
 
 const Home = () => (
   <Container>
@@ -21,9 +14,7 @@ const Home = () => (
       <div style={{ marginBottom: 10 }}>
         <Image src={logoImage} alt="Vermintide band logo" placeholder="blur" />
       </div>
-      <LinksContainer>
-        <Social iconSize={35} iconMargin={12} />
-      </LinksContainer>
+      <Social variant="dark" iconSize={35} iconMargin={12} />
     </MainSection>
   </Container>
 );
