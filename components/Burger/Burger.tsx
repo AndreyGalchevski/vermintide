@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
-import Navbar from '../Navbar';
 
+import Navbar from '../Navbar';
 import StyledBurger, { Line } from './Burger.styled';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function Burger({ open, setOpen }: Props): JSX.Element {
+const Burger = ({ open, setOpen }: Props) => {
   return (
     <>
       <Navbar />
@@ -19,4 +19,6 @@ export default function Burger({ open, setOpen }: Props): JSX.Element {
       </StyledBurger>
     </>
   );
-}
+};
+
+export default Burger;

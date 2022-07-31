@@ -4,8 +4,8 @@ const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  background: ${({ theme }) => theme.primaryDark};
+  align-items: center;
+  background: ${({ theme }) => theme.primary};
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -26,10 +26,10 @@ export default StyledMenu;
 export const MenuItem = styled.a<{ isActive: boolean }>`
   font-size: 2rem;
   text-transform: uppercase;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
-  color: ${({ theme, isActive }) => (isActive ? theme.primaryHover : theme.primaryLight)};
+  color: ${({ theme, isActive }) => (isActive ? theme.hover : theme.secondary)};
   text-decoration: none;
   transition: color 0.3s linear;
 
@@ -39,6 +39,6 @@ export const MenuItem = styled.a<{ isActive: boolean }>`
   }
 
   &:hover {
-    color: ${({ theme }) => theme.primaryHover};
+    color: ${({ theme }) => theme.hover};
   }
 `;

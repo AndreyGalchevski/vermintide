@@ -1,17 +1,14 @@
 import styled from 'styled-components';
 
-const WordsContainer = styled.div`
+export const WordsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 30px 15px;
   justify-content: center;
 `;
 
-export default WordsContainer;
-
 export const WordCard = styled.div`
-  color: ${({ theme }) => theme.primaryLight};
-  background-color: ${({ theme }) => theme.primaryDark};
+  color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
   max-width: 500px;
   flex: 1 0 calc(50% - 10px);
   flex-direction: column;

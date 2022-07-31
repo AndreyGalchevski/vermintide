@@ -1,55 +1,60 @@
-import styled from 'styled-components';
 import Image from 'next/image';
+import { FunctionComponent } from 'react';
 
-import facebookIcon from '../../public/facebook.png';
-import instagramIcon from '../../public/instagram.png';
-import spotifyIcon from '../../public/spotify.png';
-import youtubeIcon from '../../public/youtube.png';
-import soundcloudIcon from '../../public/soundcloud.png';
-import bandcampIcon from '../../public/bandcamp.png';
-
-const LinksContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 100px;
-`;
-
-const SocialLink = styled.a`
-  display: flex;
-  margin: 12px;
-  max-height: 40px;
-  max-width: 40px;
-`;
-
-export default function Social(): JSX.Element {
-  return (
-    <LinksContainer>
-      <SocialLink href="https://www.facebook.com/vermintide.band" target="_blank" rel="noreferrer">
-        <Image src={facebookIcon} alt="Facebook icon" />
-      </SocialLink>
-      <SocialLink href="https://www.instagram.com/vermintide.band" target="_blank" rel="noreferrer">
-        <Image src={instagramIcon} alt="Instagram icon" />
-      </SocialLink>
-      <SocialLink
-        href="https://open.spotify.com/artist/1qZhVB4v4QVJweTVC3c2uB"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image src={spotifyIcon} alt="Spotify icon" />
-      </SocialLink>
-      <SocialLink
-        href="https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image src={youtubeIcon} alt="YouTube icon" />
-      </SocialLink>
-      <SocialLink href="https://soundcloud.com/vermintide_band" target="_blank" rel="noreferrer">
-        <Image src={soundcloudIcon} alt="SoundCloud icon" />
-      </SocialLink>
-      <SocialLink href="https://vermintide.bandcamp.com" target="_blank" rel="noreferrer">
-        <Image src={bandcampIcon} alt="BandCamp icon" />
-      </SocialLink>
-    </LinksContainer>
-  );
+interface SocialLink {
+  url: string;
+  iconPath: string;
+  altText: string;
 }
+
+const socialLinks: Array<SocialLink> = [
+  {
+    url: 'https://open.spotify.com/artist/1qZhVB4v4QVJweTVC3c2uB',
+    iconPath: '/spotify-brands.svg',
+    altText: 'Spotify icon',
+  },
+  {
+    url: 'https://music.apple.com/artist/vermintide/1564671614',
+    iconPath: '/music-solid.svg',
+    altText: 'Apple Music icon',
+  },
+  {
+    url: 'https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw',
+    iconPath: '/youtube-brands.svg',
+    altText: 'YouTube icon',
+  },
+  {
+    url: 'https://www.instagram.com/vermintide.band',
+    iconPath: '/instagram-brands.svg',
+    altText: 'Instagram icon',
+  },
+  {
+    url: 'https://www.facebook.com/vermintide.band',
+    iconPath: '/facebook-brands.svg',
+    altText: 'Facebook icon',
+  },
+];
+
+interface Props {
+  variant: 'dark' | 'light';
+  iconMargin: number;
+  iconSize: number;
+}
+
+const Social: FunctionComponent<Props> = ({ iconMargin, iconSize }) => (
+  <>
+    {socialLinks.map(({ url, iconPath, altText }) => (
+      <a key={url} href={url} target="_blank" rel="noreferrer" style={{ margin: iconMargin }}>
+        <Image
+          src={iconPath}
+          height={iconSize}
+          width={iconSize}
+          alt={altText}
+          style={{ color: 'red' }}
+        />
+      </a>
+    ))}
+  </>
+);
+
+export default Social;

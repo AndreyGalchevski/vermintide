@@ -23,7 +23,7 @@ const StyledBurger = styled.button<{ open: boolean }>`
 export const Line = styled.div<{ open: boolean }>`
   width: 2rem;
   height: 0.25rem;
-  background: ${({ theme, open }) => (open ? theme.primaryLight : theme.primaryDark)};
+  background: ${({ theme, open }) => (open ? theme.secondary : theme.primary)};
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;

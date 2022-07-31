@@ -1,35 +1,47 @@
+import Link from 'next/link';
 import { Head, Container, MainSection } from '../../components';
 import { sounds } from '../../data';
-import SoundsContainer, { SoundEmbed } from './Sounds.styled';
+import {
+  SoundsContainer,
+  AlbumIFrame,
+  AlbumContainer,
+  AlbumImage,
+  PurchaseButton,
+  AlbumRow,
+} from './Sounds.styled';
 
-export default function Sounds(): JSX.Element {
-  return (
-    <Container>
-      <Head
-        path="/sounds"
-        pageTitle="Vermintide - Sounds"
-        pageDescription="List of songs from Vermintide's debut EP 'Meaningless convulsions': 1 - I vomit, 2 - Castrate rapist, 3 - Earth stays, 4 - Lead, 5 - Don't look in the mirror, 6 - Can't breathe, 7 - The Depression maze, 8 - The plague"
-      />
-      <MainSection>
-        {sounds.length === 0 ? (
-          <div>
-            <p>No sounds yet</p>
-          </div>
-        ) : (
-          <SoundsContainer>
-            {sounds.map((sound) => (
-              <SoundEmbed
-                key={sound.name}
-                title={sound.name}
-                src={sound.url}
+const Sounds = () => (
+  <Container>
+    <Head
+      path="/sounds"
+      pageTitle="Vermintide - Official Streams And Downloads"
+      pageDescription="Official music streams and downloads by Vermintide"
+    />
+    <MainSection>
+      <SoundsContainer>
+        {sounds.map(({ name, artworkURL, streamingURL, purchaseURL }) => (
+          <AlbumContainer key={name}>
+            <h2>{name}</h2>
+            <AlbumRow>
+              <AlbumImage src={artworkURL} alt={`${name} artwork`} />
+              <AlbumIFrame
+                title={name}
+                src={streamingURL}
                 frameBorder="0"
-                allow="encrypted-media"
-                height="232"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                allowFullScreen={false}
+                height="340"
+                width="100%"
               />
-            ))}
-          </SoundsContainer>
-        )}
-      </MainSection>
-    </Container>
-  );
-}
+            </AlbumRow>
+            <Link href={purchaseURL} passHref>
+              <PurchaseButton target="_blank">Order Now</PurchaseButton>
+            </Link>
+          </AlbumContainer>
+        ))}
+      </SoundsContainer>
+    </MainSection>
+  </Container>
+);
+
+export default Sounds;

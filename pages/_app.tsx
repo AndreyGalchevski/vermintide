@@ -5,10 +5,10 @@ import { useRef, useState } from 'react';
 
 import theme from '../utils/theme';
 import GlobalStyles from './global';
-import { Footer, Burger, Menu } from '../components';
+import { Burger, Menu } from '../components';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 
-export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+const VermintideApp = ({ Component, pageProps }: AppProps) => {
   const [open, setOpen] = useState(false);
   const burgerMenuRef = useRef(null);
 
@@ -23,8 +23,9 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           <Menu open={open} setOpen={setOpen} />
         </div>
         <Component {...pageProps} />
-        <Footer />
       </>
     </ThemeProvider>
   );
-}
+};
+
+export default VermintideApp;

@@ -17,8 +17,8 @@ export const EventImage = styled.img`
 `;
 
 export const EventCard = styled.div`
-  color: ${({ theme }) => theme.primaryLight};
-  background-color: ${({ theme }) => theme.primaryDark};
+  color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primary};
   max-width: 500px;
   flex: 1 0 calc(50% - 10px);
   flex-direction: column;

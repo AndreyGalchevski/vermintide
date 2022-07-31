@@ -5,6 +5,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 import StyledMenu, { MenuItem } from './Menu.styled';
 import externalLinkIcon from '../../public/external-link-alt-solid.png';
+import Social from '../Social';
 
 const merchandiseShopURL = 'https://www.etsy.com/shop/Vermintide';
 
@@ -13,7 +14,7 @@ interface Props {
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function Menu({ open, setOpen }: Props): JSX.Element {
+const Menu = ({ open, setOpen }: Props) => {
   const router = useRouter();
 
   const isActivePath = (currentPath: string) => {
@@ -64,4 +65,6 @@ export default function Menu({ open, setOpen }: Props): JSX.Element {
       </Link>
     </StyledMenu>
   );
-}
+};
+
+export default Menu;

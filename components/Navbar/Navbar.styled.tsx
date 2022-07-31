@@ -9,9 +9,9 @@ export const StyledNavbar = styled.nav`
   justify-content: space-around;
   height: 8vh;
   width: 100%;
-  background-color: ${({ theme }) => theme.primaryLight};
+  background-color: ${({ theme }) => theme.secondary};
 `;
 
-export const PageName = styled.h2`
+export const PageName = styled.h1`
   text-transform: capitalize;
 `;

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 import { StyledNavbar, PageName } from './Navbar.styled';
 
-export default function Navbar(): JSX.Element {
+const Navbar = () => {
   const router = useRouter();
 
   return (
@@ -10,4 +10,6 @@ export default function Navbar(): JSX.Element {
       <PageName>{router.pathname.slice(1)}</PageName>
     </StyledNavbar>
   );
-}
+};
+
+export default Navbar;

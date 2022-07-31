@@ -1,11 +1,15 @@
+export type AlbumName = 'Meaningless Convulsions' | 'Ashamed Of My Species';
+
 export interface Word {
   title: string;
+  album: AlbumName;
   content: string;
 }
 
 const words: Array<Word> = [
   {
     title: 'I Vomit',
+    album: 'Meaningless Convulsions',
     content: `
 Primitive
 Tradition
@@ -43,6 +47,7 @@ Perverted mutilation of innocent
   },
   {
     title: 'Castrate Rapist Scum',
+    album: 'Meaningless Convulsions',
     content: `
 Ravenous lust
 No empathy
@@ -81,6 +86,7 @@ Rapist scum
   },
   {
     title: 'Earth Stays',
+    album: 'Meaningless Convulsions',
     content: `
 Human ignorance
 And will to power
@@ -110,6 +116,7 @@ Earth stays
   },
   {
     title: 'Lead',
+    album: 'Meaningless Convulsions',
     content: `
 Barely fucking see
 Barely fucking think
@@ -144,6 +151,7 @@ One for me
   },
   {
     title: "Don't Look In The Mirror",
+    album: 'Meaningless Convulsions',
     content: `
 Don't look in the mirror
 You'll be disappointed
@@ -179,6 +187,7 @@ BDD
   },
   {
     title: "Can't Breathe",
+    album: 'Meaningless Convulsions',
     content: `
 Police brutality
 Everyday reality
@@ -210,6 +219,7 @@ For us to realize
   },
   {
     title: 'The Depression Maze',
+    album: 'Meaningless Convulsions',
     content: `
 When your bed becomes a grave
 Tired mind frees it’s slave
@@ -242,6 +252,7 @@ Lost in the depression maze
   },
   {
     title: 'The Plague',
+    album: 'Meaningless Convulsions',
     content: `
 Millions die
 Everyday
