@@ -24,31 +24,31 @@ const Menu = ({ open, setOpen }: Props) => {
 
   return (
     <StyledMenu open={open}>
-      <Link href="/">
+      <Link href="/" passHref>
         <MenuItem isActive={isActivePath('/')} onClick={handleMenuItemClick}>
           Home
         </MenuItem>
       </Link>
 
-      <Link href="/sounds">
+      <Link href="/sounds" passHref>
         <MenuItem isActive={isActivePath('/sounds')} onClick={handleMenuItemClick}>
           Sounds
         </MenuItem>
       </Link>
 
-      <Link href="/words">
+      <Link href="/words" passHref>
         <MenuItem isActive={isActivePath('/words')} onClick={handleMenuItemClick}>
           Words
         </MenuItem>
       </Link>
 
-      <Link href="/visuals">
+      <Link href="/visuals" passHref>
         <MenuItem isActive={isActivePath('/visuals')} onClick={handleMenuItemClick}>
           Visuals
         </MenuItem>
       </Link>
 
-      <Link href="/events">
+      <Link href="/events" passHref>
         <MenuItem isActive={isActivePath('/events')} onClick={handleMenuItemClick}>
           Events
         </MenuItem>
