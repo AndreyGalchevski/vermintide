@@ -1,7 +1,5 @@
-import Image from 'next/image';
-
 import { Head, Social, Container, MainSection } from '../components';
-import logoImage from '../public/logo.png';
+import Logo from '../components/Logo';
 
 const Home = () => (
   <Container>
@@ -12,7 +10,7 @@ const Home = () => (
     />
     <MainSection>
       <div style={{ marginBottom: 10 }}>
-        <Image src={logoImage} alt="Vermintide band logo" placeholder="blur" />
+        <Logo />
       </div>
       <Social variant="dark" iconSize={35} iconMargin={12} />
     </MainSection>
