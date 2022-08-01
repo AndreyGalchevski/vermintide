@@ -12,7 +12,7 @@ const Home = () => (
       <div style={{ marginBottom: 10 }}>
         <Logo />
       </div>
-      <Social variant="dark" iconSize={35} iconMargin={12} />
+      <Social variant="dark" iconSize={35} />
     </MainSection>
   </Container>
 );

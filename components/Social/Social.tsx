@@ -49,11 +49,10 @@ const socialLinks: Array<SocialLink> = [
 
 interface Props {
   variant: 'dark' | 'light';
-  iconMargin: number;
   iconSize: number;
 }
 
-const Social: FunctionComponent<Props> = ({ variant, iconMargin, iconSize }) => (
+const Social: FunctionComponent<Props> = ({ variant, iconSize }) => (
   <LinksContainer>
     {socialLinks.map(({ url, Icon }) => (
       <a
@@ -61,7 +60,7 @@ const Social: FunctionComponent<Props> = ({ variant, iconMargin, iconSize }) => 
         href={url}
         target="_blank"
         rel="noreferrer"
-        style={{ width: iconSize, margin: iconMargin }}
+        style={{ width: iconSize, margin: 15 }}
       >
         <Icon fill={variant === 'dark' ? 'black' : 'white'} width={iconSize} height={iconSize} />
       </a>

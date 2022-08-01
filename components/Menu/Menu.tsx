@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Dispatch, SetStateAction } from 'react';
 
 import StyledMenu, { MenuItem } from './Menu.styled';
-import externalLinkIcon from '../../public/external-link-alt-solid.png';
 import Social from '../Social';
+import ExternalLinkIcon from '../icons/ExternalLinkIcon';
 
 const merchandiseShopURL = 'https://www.etsy.com/shop/Vermintide';
 
@@ -57,14 +56,14 @@ const Menu = ({ open, setOpen }: Props) => {
 
       <Link href={merchandiseShopURL} passHref>
         <MenuItem isActive={false} target="_blank">
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'baseLine' }}>
             <span style={{ marginRight: 5 }}>Shop</span>
-            <Image src={externalLinkIcon} alt="External link icon" width="25" height="25" />
+            <ExternalLinkIcon fill="white" />
           </div>
         </MenuItem>
       </Link>
 
-      <Social iconMargin={15} variant="light" iconSize={30} />
+      <Social variant="light" iconSize={30} />
     </StyledMenu>
   );
 };
