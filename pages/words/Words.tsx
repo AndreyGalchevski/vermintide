@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import Select, { SingleValue, Options } from 'react-select';
+import Select, { SingleValue, Options, StylesConfig } from 'react-select';
 
 import { Head, Container, MainSection } from '../../components';
 import { words } from '../../data';
 import { AlbumName } from '../../data/words';
+import theme from '../../utils/theme';
 import WordsContainer, { Content, WordCard } from './Words.styled';
 
 export interface AlbumOption {
@@ -14,6 +15,23 @@ export interface AlbumOption {
 const options: Options<AlbumOption> = [
   { value: 'Meaningless Convulsions', label: 'Meaningless Convulsions' },
 ];
+
+const selectStyles: StylesConfig<AlbumOption> = {
+  control: (base) => ({
+    ...base,
+    ':hover': { borderColor: theme.hover },
+    ':focus': { borderColor: theme.hover },
+    ':focus-visible': { borderColor: theme.hover },
+    ':focus-within': {
+      borderColor: theme.hover,
+      boxShadow: `0 0 0 1px ${theme.hover}`,
+    },
+  }),
+  option: (base) => ({
+    ...base,
+    backgroundColor: theme.hover,
+  }),
+};
 
 const Words = () => {
   const [selectedAlbum, setSelectedAlbum] = useState<SingleValue<AlbumOption>>(options[0]);
@@ -43,6 +61,7 @@ const Words = () => {
               value={selectedAlbum}
               options={options}
               onChange={handleAlbumChange}
+              styles={selectStyles}
             />
           </div>
           <WordsContainer>
