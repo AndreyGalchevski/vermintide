@@ -10,6 +10,16 @@ interface Event {
 
 const events: Array<Event> = [
   {
+    name: 'At the Gallows End!',
+    venue: 'Blaze bar',
+    city: 'Jerusalem',
+    country: 'Israel',
+    date: new Date(2022, 8, 10, 21, 0),
+    fbEvent: 'https://www.facebook.com/events/819396026173679',
+    image:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1659794917/vermintide/events/290134744_743099700298299_4630275179556612941_n.jpg',
+  },
+  {
     name: 'Spit Ya Teeth',
     venue: 'Levontin',
     city: 'Tel Aviv',
