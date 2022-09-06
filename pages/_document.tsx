@@ -6,7 +6,7 @@ const structuredData = {
   '@type': 'MusicGroup',
   '@id': 'https://musicbrainz.org/artist/455707a4-a273-4b12-a26f-fcd41abef63a',
   name: 'Vermintide',
-  description: 'Slamming Deathgrind collective from Israel',
+  description: 'Israeli Slamming Grindcore',
   logo: {
     '@type': 'ImageObject',
     url: 'https://res.cloudinary.com/dqvimfd8b/image/upload/v1618120314/vermintide/fb-logo.png',
@@ -51,17 +51,8 @@ const structuredData = {
       member: {
         '@type': 'Person',
         name: 'Ido Reuven',
-        givenName: 'Real Name if different',
       },
       roleName: 'bass',
-    },
-    {
-      '@type': 'OrganizationRole',
-      member: {
-        '@type': 'Person',
-        name: 'Idan Lupo',
-      },
-      roleName: 'drums',
     },
   ],
 };
