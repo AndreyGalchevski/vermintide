@@ -6,7 +6,7 @@ import StyledMenu, { MenuItem } from './Menu.styled';
 import Social from '../Social';
 import ExternalLinkIcon from '../icons/ExternalLinkIcon';
 
-const merchandiseShopURL = 'https://www.etsy.com/shop/Vermintide';
+const merchandiseShopURL = 'https://shop.vermintide.band';
 
 interface Props {
   open: boolean;
