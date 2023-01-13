@@ -1,4 +1,6 @@
-const theme = {
+import { VermintideTheme } from 'styled-components';
+
+const theme: VermintideTheme = {
   primary: '#212121',
   secondary: '#fafafa',
   hover: '#c62828',
@@ -7,5 +9,3 @@ const theme = {
 };
 
 export default theme;
-
-export type Theme = typeof theme;

@@ -4,6 +4,7 @@
 const nextConfig = {
   /* config options here */
   swcMinify: true,
+  reactStrictMode: true,
   compiler: {
     styledComponents: true,
   },

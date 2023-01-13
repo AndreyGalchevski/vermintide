@@ -1,9 +1,9 @@
 import { FunctionComponent, SVGProps } from 'react';
 import styled from 'styled-components';
 
+import BandcampIcon from '../icons/BandcampIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 import InstagramIcon from '../icons/InstagramIcon';
-import MusicIcon from '../icons/MusicIcon';
 import SpotifyIcon from '../icons/SpotifyIcon';
 import YouTubeIcon from '../icons/YouTubeIcon';
 
@@ -26,9 +26,9 @@ const socialLinks: Array<SocialLink> = [
     altText: 'Spotify icon',
   },
   {
-    url: 'https://music.apple.com/artist/vermintide/1564671614',
-    Icon: MusicIcon,
-    altText: 'Apple Music icon',
+    url: 'https://vermintide.bandcamp.com',
+    Icon: BandcampIcon,
+    altText: 'Bandcamp icon',
   },
   {
     url: 'https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw',
