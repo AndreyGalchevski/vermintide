@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const SoundsContainer = styled.div`
@@ -46,7 +47,7 @@ export const AlbumIFrame = styled.iframe`
   }
 `;
 
-export const PurchaseButton = styled.a`
+export const PurchaseButton = styled(Link)`
   background-color: ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.secondary};
   padding: 16px 26px;

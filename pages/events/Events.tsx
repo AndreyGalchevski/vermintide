@@ -26,10 +26,8 @@ const Events = () => (
               </p>
               <p>{venue}</p>
               {fbEvent && (
-                <Link href={fbEvent} passHref>
-                  <a target="_blank">
-                    <b>Facebook Event</b>
-                  </a>
+                <Link href={fbEvent} target="_blank">
+                  <b>Facebook Event</b>
                 </Link>
               )}
             </div>

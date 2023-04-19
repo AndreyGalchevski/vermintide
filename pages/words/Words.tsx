@@ -62,6 +62,7 @@ const Words = () => {
               options={options}
               onChange={handleAlbumChange}
               styles={selectStyles}
+              instanceId="lyrics-select"
             />
           </div>
           <WordsContainer>

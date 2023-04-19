@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledMenu = styled.nav<{ open: boolean }>`
@@ -23,7 +24,7 @@ const StyledMenu = styled.nav<{ open: boolean }>`
 
 export default StyledMenu;
 
-export const MenuItem = styled.a<{ isActive: boolean }>`
+export const MenuItem = styled(Link)<{ isActive: boolean }>`
   font-size: 2rem;
   text-transform: uppercase;
   padding: 1rem 0;

@@ -33,9 +33,9 @@ const Sounds = () => (
                 width="100%"
               />
             </AlbumRow>
-            <Link href={purchaseURL} passHref>
-              <PurchaseButton target="_blank">Order Now</PurchaseButton>
-            </Link>
+            <PurchaseButton href={purchaseURL} target="_blank">
+              Order Now
+            </PurchaseButton>
           </AlbumContainer>
         ))}
       </SoundsContainer>

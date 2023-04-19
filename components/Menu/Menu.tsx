@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Dispatch, SetStateAction } from 'react';
 
@@ -24,44 +23,32 @@ const Menu = ({ open, setOpen }: Props) => {
 
   return (
     <StyledMenu open={open}>
-      <Link href="/" passHref>
-        <MenuItem isActive={isActivePath('/')} onClick={handleMenuItemClick}>
-          Home
-        </MenuItem>
-      </Link>
+      <MenuItem href="/" onClick={handleMenuItemClick} isActive={isActivePath('/')}>
+        Home
+      </MenuItem>
 
-      <Link href="/sounds" passHref>
-        <MenuItem isActive={isActivePath('/sounds')} onClick={handleMenuItemClick}>
-          Sounds
-        </MenuItem>
-      </Link>
+      <MenuItem href="/sounds" onClick={handleMenuItemClick} isActive={isActivePath('/sounds')}>
+        Sounds
+      </MenuItem>
 
-      <Link href="/words" passHref>
-        <MenuItem isActive={isActivePath('/words')} onClick={handleMenuItemClick}>
-          Words
-        </MenuItem>
-      </Link>
+      <MenuItem href="/words" onClick={handleMenuItemClick} isActive={isActivePath('/words')}>
+        Words
+      </MenuItem>
 
-      <Link href="/visuals" passHref>
-        <MenuItem isActive={isActivePath('/visuals')} onClick={handleMenuItemClick}>
-          Visuals
-        </MenuItem>
-      </Link>
+      <MenuItem href="/visuals" onClick={handleMenuItemClick} isActive={isActivePath('/visuals')}>
+        Visuals
+      </MenuItem>
 
-      <Link href="/events" passHref>
-        <MenuItem isActive={isActivePath('/events')} onClick={handleMenuItemClick}>
-          Events
-        </MenuItem>
-      </Link>
+      <MenuItem href="/events" onClick={handleMenuItemClick} isActive={isActivePath('/events')}>
+        Events
+      </MenuItem>
 
-      <Link href={merchandiseShopURL} passHref>
-        <MenuItem isActive={false} target="_blank">
-          <div style={{ display: 'flex', alignItems: 'baseLine' }}>
-            <span style={{ marginRight: 5 }}>Shop</span>
-            <ExternalLinkIcon fill="white" />
-          </div>
-        </MenuItem>
-      </Link>
+      <MenuItem href={merchandiseShopURL} isActive={false} target="_blank">
+        <div style={{ display: 'flex', alignItems: 'baseLine' }}>
+          <span style={{ marginRight: 5 }}>Shop</span>
+          <ExternalLinkIcon fill="white" />
+        </div>
+      </MenuItem>
 
       <Social variant="light" iconSize={30} />
     </StyledMenu>
