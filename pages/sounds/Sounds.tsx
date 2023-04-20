@@ -7,6 +7,7 @@ import SoundsContainer, {
   AlbumImage,
   PurchaseButton,
   AlbumRow,
+  WordsButton,
 } from './Sounds.styled';
 
 const Sounds = () => (
@@ -33,9 +34,12 @@ const Sounds = () => (
                 width="100%"
               />
             </AlbumRow>
-            <PurchaseButton href={purchaseURL} target="_blank">
-              Buy
-            </PurchaseButton>
+            <div style={{ display: 'flex' }}>
+              <PurchaseButton href={purchaseURL} target="_blank">
+                Buy
+              </PurchaseButton>
+              <WordsButton href={{ pathname: '/words', query: { album: name } }}>Words</WordsButton>
+            </div>
           </AlbumContainer>
         ))}
       </SoundsContainer>

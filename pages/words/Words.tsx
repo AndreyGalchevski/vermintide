@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Select, { SingleValue, Options, StylesConfig } from 'react-select';
+import { useRouter } from 'next/router';
 
 import { Head, Container, MainSection } from '../../components';
 import { albums } from '../../data';
@@ -35,7 +36,11 @@ const selectStyles: StylesConfig<AlbumOption> = {
 };
 
 const Words = () => {
-  const [selectedAlbum, setSelectedAlbum] = useState<SingleValue<AlbumOption>>(options[0]);
+  const router = useRouter();
+
+  const [selectedAlbum, setSelectedAlbum] = useState<SingleValue<AlbumOption>>(
+    options.find((it) => it.value === router.query.album) || options[0],
+  );
 
   const handleAlbumChange = (option: AlbumOption | null) => {
     setSelectedAlbum(option);

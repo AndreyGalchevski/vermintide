@@ -58,3 +58,13 @@ export const PurchaseButton = styled(Link)`
     color: ${({ theme }) => theme.hover};
   }
 `;
+
+export const WordsButton = styled(Link)`
+  background-color: ${({ theme }) => theme.secondary};
+  color: ${({ theme }) => theme.primary};
+  padding: 16px 26px;
+  box-shadow: ${({ theme }) => `inset 0px 0px 0px 1px ${theme.primary}`};
+  &:hover {
+    color: ${({ theme }) => theme.hover};
+  }
+`;
