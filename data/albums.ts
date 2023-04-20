@@ -2,15 +2,29 @@ export type AlbumName = 'Meaningless Convulsions' | 'Ashamed Of My Species';
 
 export interface Word {
   title: string;
-  album: AlbumName;
   content: string;
 }
 
-const words: Array<Word> = [
+export interface Album {
+  name: AlbumName;
+  streamingURL: string;
+  artworkURL: string;
+  purchaseURL: string;
+  lyrics: Array<Word>;
+}
+
+const sounds: Array<Album> = [
   {
-    title: 'How Dare You?',
-    album: 'Ashamed Of My Species',
-    content: `
+    name: 'Ashamed Of My Species',
+    streamingURL:
+      'https://open.spotify.com/embed/album/3LGuV5M5zvP0tor8snYpiD?utm_source=generator',
+    artworkURL:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1682022299/vermintide/sounds/Ashamed-Of-My-Species.png',
+    purchaseURL: 'https://vermintide.bandcamp.com/album/ashamed-of-my-species',
+    lyrics: [
+      {
+        title: 'How Dare You?',
+        content: `
 How dare you doubt my god
 Saying my beliefs are flawed 
 How dare you blunt my sword
@@ -43,11 +57,10 @@ Sword is divine
 I must ensure
 All infidels die
   `,
-  },
-  {
-    title: 'Empty Oceans',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Empty Oceans',
+        content: `
 Micro-plastics fill up the fish
 So they starve to death
 
@@ -69,11 +82,10 @@ Oceans
 Empty
 Oceans
   `,
-  },
-  {
-    title: 'Arbitrary Lines',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Arbitrary Lines',
+        content: `
 Kill for the history
 Kill for the pride
 Kill for the meaningless
@@ -100,11 +112,10 @@ To hate
 
 Hate!
   `,
-  },
-  {
-    title: 'Sea Of Vermin',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Sea Of Vermin',
+        content: `
 Sea of
 Vermin
 Spreading the disease
@@ -126,11 +137,10 @@ Vermin vermin vermin vermin
 I'm ashamed of my species
 I'm ashamed of my species
   `,
-  },
-  {
-    title: 'Trauma Congenital',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Trauma Congenital',
+        content: `
 Subconscious compulsive urge to breed
 Turns your blind eye to all those in need
 
@@ -155,11 +165,10 @@ Children are born with their future torn
 Trauma congenital 
 Destined to be deprived
   `,
-  },
-  {
-    title: 'NHI',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'NHI',
+        content: `
 Let them rot, let them reek
 Cast out by society
 
@@ -180,11 +189,10 @@ Involved
 Let them rot, let them reek
 Cast out by society
   `,
-  },
-  {
-    title: 'The Bridge Of Death',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'The Bridge Of Death',
+        content: `
 Thoughts of failure
 Fill you with dread
 What is success?
@@ -209,11 +217,10 @@ Jump! Jump!
 
 Jump!
   `,
-  },
-  {
-    title: 'Pierced Through The Neck',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Pierced Through The Neck',
+        content: `
 Pierced through the neck
 Pierced through the neck
 
@@ -248,11 +255,10 @@ Arteries
 Pierced through the neck
 Pierced through the neck
   `,
-  },
-  {
-    title: 'Hell Is A Place On Earth',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Hell Is A Place On Earth',
+        content: `
 Female 
 Genital
 Mutilation 
@@ -275,11 +281,10 @@ Evil
 Removal of the clitoris
 And infibulation
   `,
-  },
-  {
-    title: 'Russian Battleship Fuck Off',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Russian Battleship Fuck Off',
+        content: `
 Русский военный корабль иди на хуй
 
 Русский военный корабль иди на хуй
@@ -288,11 +293,10 @@ Russian battleship fuck off
 Russian battleship fuck
 Off
   `,
-  },
-  {
-    title: 'Total Control',
-    album: 'Ashamed Of My Species',
-    content: `
+      },
+      {
+        title: 'Total Control',
+        content: `
 All your actions captured by
 (The) omnipresent cyber eye
 Every aspect of your life
@@ -321,11 +325,20 @@ Hope is lost
 Total 
 Control
   `,
+      },
+    ],
   },
   {
-    title: 'I Vomit',
-    album: 'Meaningless Convulsions',
-    content: `
+    name: 'Meaningless Convulsions',
+    streamingURL:
+      'https://open.spotify.com/embed/album/6Ay1zvYut0KnIHDIsOco3m?utm_source=generator',
+    artworkURL:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1682022299/vermintide/sounds/Meaningless-Convulsions.png',
+    purchaseURL: 'https://vermintide.bandcamp.com/album/meaningless-convulsions',
+    lyrics: [
+      {
+        title: 'I Vomit',
+        content: `
 Primitive
 Tradition
 (Of) Barbaric
@@ -359,11 +372,10 @@ I vomit
 Wrinkled lips sucking on infant skin
 Perverted mutilation of innocent
   `,
-  },
-  {
-    title: 'Castrate Rapist Scum',
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: 'Castrate Rapist Scum',
+        content: `
 Ravenous lust
 No empathy
 Sexual predator
@@ -398,11 +410,10 @@ Rapist scum
 Rapist scum
 Rapist scum
   `,
-  },
-  {
-    title: 'Earth Stays',
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: 'Earth Stays',
+        content: `
 Human ignorance
 And will to power
 Will obliterate
@@ -428,11 +439,10 @@ Bones crack
 Life fades
 Earth stays
   `,
-  },
-  {
-    title: 'Lead',
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: 'Lead',
+        content: `
 Barely fucking see
 Barely fucking think
 I barely fucking doing anything
@@ -463,11 +473,10 @@ One for me
 One for you
 One for me
   `,
-  },
-  {
-    title: "Don't Look In The Mirror",
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: "Don't Look In The Mirror",
+        content: `
 Don't look in the mirror
 You'll be disappointed
 
@@ -499,11 +508,10 @@ Mind is Satan
 Body dysmorphic disorder
 BDD
   `,
-  },
-  {
-    title: "Can't Breathe",
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: "Can't Breathe",
+        content: `
 Police brutality
 Everyday reality
 Bad luck to begin
@@ -531,11 +539,10 @@ When your knee is on my neck
 How many people should die
 For us to realize
   `,
-  },
-  {
-    title: 'The Depression Maze',
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: 'The Depression Maze',
+        content: `
 When your bed becomes a grave
 Tired mind frees it’s slave
 Pain-free body now decays
@@ -564,11 +571,10 @@ Tired mind frees it’s slave
 Pain-free body now decays
 Lost in the depression maze
   `,
-  },
-  {
-    title: 'The Plague',
-    album: 'Meaningless Convulsions',
-    content: `
+      },
+      {
+        title: 'The Plague',
+        content: `
 Millions die
 Everyday
 Waterfall of blood
@@ -607,7 +613,9 @@ Plague is
 We are the
 Plague
   `,
+      },
+    ],
   },
 ];
 
-export default words;
+export default sounds;

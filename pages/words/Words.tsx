@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Select, { SingleValue, Options, StylesConfig } from 'react-select';
 
 import { Head, Container, MainSection } from '../../components';
-import { words } from '../../data';
-import { AlbumName } from '../../data/words';
+import { albums } from '../../data';
+import { AlbumName } from '../../data/albums';
 import theme from '../../utils/theme';
 import WordsContainer, { Content, WordCard } from './Words.styled';
 
@@ -67,9 +67,9 @@ const Words = () => {
             />
           </div>
           <WordsContainer>
-            {words
-              .filter((it) => it.album === selectedAlbum?.value)
-              .map(({ title, content }) => (
+            {albums
+              .find((it) => it.name === selectedAlbum?.value)
+              ?.lyrics.map(({ title, content }) => (
                 <WordCard key={title}>
                   <h2>{title}</h2>
                   <Content>{content}</Content>

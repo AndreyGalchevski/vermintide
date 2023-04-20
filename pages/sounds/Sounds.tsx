@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Head, Container, MainSection } from '../../components';
-import { sounds } from '../../data';
+import { albums } from '../../data';
 import SoundsContainer, {
   AlbumIFrame,
   AlbumContainer,
@@ -18,7 +18,7 @@ const Sounds = () => (
     />
     <MainSection>
       <SoundsContainer>
-        {sounds.map(({ name, artworkURL, streamingURL, purchaseURL }) => (
+        {albums.map(({ name, artworkURL, streamingURL, purchaseURL }) => (
           <AlbumContainer key={name}>
             <h2>{name}</h2>
             <AlbumRow>

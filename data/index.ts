@@ -1,6 +1,5 @@
-import words from './words';
-import sounds from './sounds';
 import events from './events';
 import visuals from './visuals';
+import albums from './albums';
 
-export { events, sounds, words, visuals };
+export { events, visuals, albums };
