@@ -8,6 +8,321 @@ export interface Word {
 
 const words: Array<Word> = [
   {
+    title: 'How Dare You?',
+    album: 'Ashamed Of My Species',
+    content: `
+How dare you doubt my god
+Saying my beliefs are flawed 
+How dare you blunt my sword
+Disrupting the holy war
+How dare you tell the truth
+To my feeble-minded youth
+
+Hatred is pure
+Sword is divine 
+I must ensure
+All infidels die
+
+How dare you doubt my god
+Saying my beliefs are flawed 
+How dare you blunt my sword
+Disrupting the holy war
+
+How
+Date
+You 
+Cunt
+
+Killing
+In god's name 
+Killing
+In god's name
+
+Hatred is pure
+Sword is divine 
+I must ensure
+All infidels die
+  `,
+  },
+  {
+    title: 'Empty Oceans',
+    album: 'Ashamed Of My Species',
+    content: `
+Micro-plastics fill up the fish
+So they starve to death
+
+Empty
+Oceans
+Empty
+Oceans
+Empty
+
+Fishing nets have no eyes or ears
+To know who they're killing 
+
+Human's lust for flesh
+Will make them 
+Learn to live in the
+
+Empty
+Oceans
+Empty
+Oceans
+  `,
+  },
+  {
+    title: 'Arbitrary Lines',
+    album: 'Ashamed Of My Species',
+    content: `
+Kill for the history
+Kill for the pride
+Kill for the meaningless
+Arbitrary lines
+
+Divide us
+And rule us
+
+Be a tool of war
+Be a tool of state
+Be a tool of fantasy
+They want to create
+
+Artificial
+Boundaries
+
+Give us one more
+Reason to
+Hate 
+
+Give us one more
+Reason
+To hate
+
+Hate!
+  `,
+  },
+  {
+    title: 'Sea Of Vermin',
+    album: 'Ashamed Of My Species',
+    content: `
+Sea of
+Vermin
+Spreading the disease
+
+Deadly
+It's called
+The humanity
+
+Ravaging everything
+In it's path
+Dead soil, empty oceans
+Bloodbath
+
+Vermin
+Vermin
+Vermin
+Vermin vermin vermin vermin
+
+I'm ashamed of my species
+I'm ashamed of my species
+  `,
+  },
+  {
+    title: 'Trauma Congenital',
+    album: 'Ashamed Of My Species',
+    content: `
+Subconscious compulsive urge to breed
+Turns your blind eye to all those in need
+
+Your selfish genes turned you into slave
+Mindlessly copying your DNA
+
+Humans
+Propagate
+
+Trauma congenital 
+Destined to be deprived
+
+Humans
+Propagate
+
+Crisis
+They create
+
+Overpopulation brings devastation
+Children are born with their future torn
+
+Trauma congenital 
+Destined to be deprived
+  `,
+  },
+  {
+    title: 'NHI',
+    album: 'Ashamed Of My Species',
+    content: `
+Let them rot, let them reek
+Cast out by society
+
+No humans
+Involved
+
+Minorities forced to
+Committing crime
+Desperate, neglected
+And dehumanized
+
+Out of sight, out of mind
+Just another NHI
+
+No humans
+Involved
+
+Let them rot, let them reek
+Cast out by society
+  `,
+  },
+  {
+    title: 'The Bridge Of Death',
+    album: 'Ashamed Of My Species',
+    content: `
+Thoughts of failure
+Fill you with dread
+What is success?
+Is it all in your head?
+
+Take a leap of faith
+Jump without looking down
+From the bridge of death
+Jump! Jump!
+
+Jump!
+
+All doors are closed 
+But death's door
+Enter and become
+More worthy than before 
+
+Take a leap of faith
+Jump without looking down
+From the bridge of death
+Jump! Jump!
+
+Jump!
+  `,
+  },
+  {
+    title: 'Pierced Through The Neck',
+    album: 'Ashamed Of My Species',
+    content: `
+Pierced through the neck
+Pierced through the neck
+
+Glorified butcher
+Meets his fate
+Gored and maimed
+
+Disappointing 
+The mindless crowd
+His face is plowed
+
+Pierced through the neck
+
+Innocent creature
+Trapped inside
+Cheap his life. 
+
+Forced to engage
+In senseless war
+With matador
+
+Pierced through the
+Neck
+
+Neck!
+
+Blood
+Gushing from
+Carotid
+Arteries
+
+Pierced through the neck
+Pierced through the neck
+  `,
+  },
+  {
+    title: 'Hell Is A Place On Earth',
+    album: 'Ashamed Of My Species',
+    content: `
+Female 
+Genital
+Mutilation 
+
+Hell is a place on Earth 
+Hell of a place
+
+Female 
+Genital
+Mutilation 
+
+Hell is a place on Earth 
+Hell of a place
+
+Repulsive
+And senseless
+Acts of
+Evil
+
+Removal of the clitoris
+And infibulation
+  `,
+  },
+  {
+    title: 'Russian Battleship Fuck Off',
+    album: 'Ashamed Of My Species',
+    content: `
+Русский военный корабль иди на хуй
+
+Русский военный корабль иди на хуй
+
+Russian battleship fuck off
+Russian battleship fuck
+Off
+  `,
+  },
+  {
+    title: 'Total Control',
+    album: 'Ashamed Of My Species',
+    content: `
+All your actions captured by
+(The) omnipresent cyber eye
+Every aspect of your life
+Registered and scrutinized
+
+Total
+Control
+
+Scoring
+System's
+
+In place
+To protect you
+From yourself
+
+Engineered
+Sinister
+Artificial
+Humankind 
+
+Total
+Control 
+
+Can't resist 
+Hope is lost
+Total 
+Control
+  `,
+  },
+  {
     title: 'I Vomit',
     album: 'Meaningless Convulsions',
     content: `

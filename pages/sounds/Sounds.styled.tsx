@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const SoundsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin: 30px 15px;
 `;
 
@@ -13,6 +15,7 @@ export const AlbumContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 8px;
 `;
 
 export const AlbumRow = styled.div`

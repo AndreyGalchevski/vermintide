@@ -5,6 +5,14 @@ interface Visual {
 
 const visuals: Array<Visual> = [
   {
+    name: 'Vermintide - Arbitrary (Official Music Video)',
+    url: 'https://www.youtube.com/embed/aPI4eFZVGMc',
+  },
+  {
+    name: 'Vermintide - Pierced Through The Neck (Official Music Video)',
+    url: 'https://www.youtube.com/embed/6DM2I6Zm518',
+  },
+  {
     name: 'Vermintide - Castrate Rapist Scum (Official Music Video)',
     url: 'https://www.youtube.com/embed/AMhWXXy-x68',
   },

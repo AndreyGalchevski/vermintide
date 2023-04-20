@@ -13,6 +13,7 @@ export interface AlbumOption {
 }
 
 const options: Options<AlbumOption> = [
+  { value: 'Ashamed Of My Species', label: 'Ashamed Of My Species' },
   { value: 'Meaningless Convulsions', label: 'Meaningless Convulsions' },
 ];
 
