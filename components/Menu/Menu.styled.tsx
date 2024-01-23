@@ -24,22 +24,16 @@ const StyledMenu = styled.nav<{ open: boolean }>`
 
 export default StyledMenu;
 
-export const MenuItem = styled(Link)<{ isActive: boolean }>`
-  font-size: 2rem;
+export const MenuItem = styled(Link)<{ $isActive: boolean }>`
+  font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
-  color: ${({ theme, isActive }) => (isActive ? theme.hover : theme.secondary)};
+  color: ${({ theme, $isActive }) => ($isActive ? theme.accent : theme.secondary)};
   text-decoration: none;
   transition: color 0.3s linear;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
   &:hover {
-    color: ${({ theme }) => theme.hover};
+    color: ${({ theme }) => theme.accent};
   }
 `;

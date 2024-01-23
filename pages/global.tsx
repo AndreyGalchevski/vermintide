@@ -22,6 +22,17 @@ const GlobalStyles = createGlobalStyle<{ theme: VermintideTheme }>`
     background: ${({ theme }) => theme.secondary};
     color: ${({ theme }) => theme.primary};
   }
+
+  .yt-lite {
+    border-radius: 10px;
+    width: 330px;
+    height: 185px;
+
+    @media (min-width: 768px) {
+      width: 583px;
+      height: 328px;
+    }
+  }
 `;
 
 export default GlobalStyles;

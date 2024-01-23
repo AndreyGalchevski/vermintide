@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Head, Container, MainSection } from '../../components';
+import { Container, Head, MainSection } from '../../components';
 import { albums } from '../../data';
 import SoundsContainer, {
   AlbumIFrame,
@@ -30,15 +29,15 @@ const Sounds = () => (
                 frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 allowFullScreen={false}
-                height="340"
-                width="100%"
               />
             </AlbumRow>
             <div style={{ display: 'flex' }}>
               <PurchaseButton href={purchaseURL} target="_blank">
                 Buy
               </PurchaseButton>
-              <WordsButton href={{ pathname: '/words', query: { album: name } }}>Words</WordsButton>
+              <WordsButton href={{ pathname: '/words', search: `album=${name}` }}>
+                Words
+              </WordsButton>
             </div>
           </AlbumContainer>
         ))}

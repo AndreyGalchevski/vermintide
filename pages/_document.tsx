@@ -6,29 +6,38 @@ const structuredData = {
   '@type': 'MusicGroup',
   '@id': 'https://musicbrainz.org/artist/455707a4-a273-4b12-a26f-fcd41abef63a',
   name: 'Vermintide',
-  description: 'Israeli Slamming Grindcore',
+  description: 'Israeli DeathGrind',
   logo: {
     '@type': 'ImageObject',
     url: 'https://res.cloudinary.com/dqvimfd8b/image/upload/v1618120314/vermintide/fb-logo.png',
   },
   image: {
     '@type': 'ImageObject',
-    url: 'https://res.cloudinary.com/dqvimfd8b/image/upload/v1645194062/vermintide/IMG_0086.png',
+    url: 'https://res.cloudinary.com/dqvimfd8b/image/upload/v1682075200/vermintide/og_image.png',
   },
   url: 'https://vermintide.band',
   genre: ['Death Metal', 'Grindcore'],
   sameAs: [
+    'https://vermintide.bandcamp.com',
     'https://www.facebook.com/vermintide.band',
     'https://www.instagram.com/vermintide.band',
     'https://www.youtube.com/channel/UCgJ586vhsKUFASCBA5RrDLw',
     'https://soundcloud.com/vermintide_band',
   ],
-  album: {
-    '@type': 'MusicAlbum',
-    name: 'Meaningless Convulsions',
-    '@id': 'https://musicbrainz.org/release-group/700a41d7-150b-48e2-a6fc-75a6df92f48d',
-    datePublished: '2011',
-  },
+  album: [
+    {
+      '@type': 'MusicAlbum',
+      name: 'Meaningless Convulsions',
+      '@id': 'https://musicbrainz.org/release-group/700a41d7-150b-48e2-a6fc-75a6df92f48d',
+      datePublished: '2021',
+    },
+    {
+      '@type': 'MusicAlbum',
+      name: 'Ashamed Of My Species',
+      '@id': 'https://musicbrainz.org/release-group/a821b9fd-e769-4cdf-a3e4-7536d30d5d82',
+      datePublished: '2023',
+    },
+  ],
   member: [
     {
       '@type': 'OrganizationRole',
@@ -50,7 +59,7 @@ const structuredData = {
       '@type': 'OrganizationRole',
       member: {
         '@type': 'Person',
-        name: 'Ido Reuven',
+        name: 'Dima Medvednik',
       },
       roleName: 'bass',
     },

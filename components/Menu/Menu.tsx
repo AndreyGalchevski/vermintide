@@ -23,27 +23,27 @@ const Menu = ({ open, setOpen }: Props) => {
 
   return (
     <StyledMenu open={open}>
-      <MenuItem href="/" onClick={handleMenuItemClick} isActive={isActivePath('/')}>
+      <MenuItem href="/" onClick={handleMenuItemClick} $isActive={isActivePath('/')}>
         Home
       </MenuItem>
 
-      <MenuItem href="/sounds" onClick={handleMenuItemClick} isActive={isActivePath('/sounds')}>
+      <MenuItem href="/sounds" onClick={handleMenuItemClick} $isActive={isActivePath('/sounds')}>
         Sounds
       </MenuItem>
 
-      <MenuItem href="/words" onClick={handleMenuItemClick} isActive={isActivePath('/words')}>
+      <MenuItem href="/words" onClick={handleMenuItemClick} $isActive={isActivePath('/words')}>
         Words
       </MenuItem>
 
-      <MenuItem href="/visuals" onClick={handleMenuItemClick} isActive={isActivePath('/visuals')}>
+      <MenuItem href="/visuals" onClick={handleMenuItemClick} $isActive={isActivePath('/visuals')}>
         Visuals
       </MenuItem>
 
-      <MenuItem href="/events" onClick={handleMenuItemClick} isActive={isActivePath('/events')}>
+      <MenuItem href="/events" onClick={handleMenuItemClick} $isActive={isActivePath('/events')}>
         Events
       </MenuItem>
 
-      <MenuItem href={merchandiseShopURL} isActive={false} target="_blank">
+      <MenuItem href={merchandiseShopURL} $isActive={false} target="_blank">
         <div style={{ display: 'flex', alignItems: 'baseLine' }}>
           <span style={{ marginRight: 5 }}>Shop</span>
           <ExternalLinkIcon fill="white" />

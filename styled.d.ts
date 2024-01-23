@@ -4,8 +4,9 @@ declare module 'styled-components' {
   export interface VermintideTheme {
     primary: string;
     secondary: string;
-    hover: string;
+    accent: string;
     mobile: string;
     small: string;
+    borderRadius: string;
   }
 }

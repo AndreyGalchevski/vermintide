@@ -6,7 +6,9 @@ import { Head, Container, MainSection } from '../../components';
 import { albums } from '../../data';
 import { AlbumName } from '../../data/albums';
 import theme from '../../utils/theme';
-import WordsContainer, { Content, WordCard } from './Words.styled';
+import { Content } from './Words.styled';
+import { MasonryBrick, MasonryLayout } from '../../components/Masonry';
+import Card from '../../components/Card';
 
 export interface AlbumOption {
   value: AlbumName;
@@ -14,6 +16,7 @@ export interface AlbumOption {
 }
 
 const options: Options<AlbumOption> = [
+  { value: 'Virus Pedigree', label: 'Virus Pedigree' },
   { value: 'Ashamed Of My Species', label: 'Ashamed Of My Species' },
   { value: 'Meaningless Convulsions', label: 'Meaningless Convulsions' },
 ];
@@ -21,17 +24,17 @@ const options: Options<AlbumOption> = [
 const selectStyles: StylesConfig<AlbumOption> = {
   control: (base) => ({
     ...base,
-    ':hover': { borderColor: theme.hover },
-    ':focus': { borderColor: theme.hover },
-    ':focus-visible': { borderColor: theme.hover },
+    ':hover': { borderColor: theme.accent },
+    ':focus': { borderColor: theme.accent },
+    ':focus-visible': { borderColor: theme.accent },
     ':focus-within': {
-      borderColor: theme.hover,
-      boxShadow: `0 0 0 1px ${theme.hover}`,
+      borderColor: theme.accent,
+      boxShadow: `0 0 0 1px ${theme.accent}`,
     },
   }),
   option: (base) => ({
     ...base,
-    backgroundColor: theme.hover,
+    backgroundColor: theme.accent,
   }),
 };
 
@@ -71,16 +74,18 @@ const Words = () => {
               instanceId="lyrics-select"
             />
           </div>
-          <WordsContainer>
+          <MasonryLayout>
             {albums
               .find((it) => it.name === selectedAlbum?.value)
               ?.lyrics.map(({ title, content }) => (
-                <WordCard key={title}>
-                  <h2>{title}</h2>
-                  <Content>{content}</Content>
-                </WordCard>
+                <MasonryBrick key={title}>
+                  <Card>
+                    <h2>{title}</h2>
+                    <Content>{content}</Content>
+                  </Card>
+                </MasonryBrick>
               ))}
-          </WordsContainer>
+          </MasonryLayout>
         </div>
       </MainSection>
     </Container>

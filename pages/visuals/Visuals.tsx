@@ -1,6 +1,8 @@
-import { Head, Container, MainSection } from '../../components';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+
+import { Container, Head, MainSection } from '../../components';
 import { visuals } from '../../data';
-import VisualsContainer, { HugeVideoIFrame, VideoIFrame, VideoRow } from './Visuals.styled';
+import VisualsContainer, { VideoRow } from './Visuals.styled';
 
 const Visuals = () => (
   <Container>
@@ -9,27 +11,11 @@ const Visuals = () => (
       pageTitle="Vermintide - Official Music Video Streams"
       pageDescription="Official music video streams by Vermintide"
     />
-    <MainSection>
+    <MainSection style={{ marginTop: '1em' }}>
       <VisualsContainer>
-        <VideoRow>
-          <HugeVideoIFrame
-            title={visuals[0].name}
-            src={visuals[0].url}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          <p>{visuals[0].name}</p>
-        </VideoRow>
-        {visuals.slice(1).map(({ name, url }) => (
-          <VideoRow key={name}>
-            <VideoIFrame
-              title={name}
-              src={url}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+        {visuals.map(({ name, youtubeID }) => (
+          <VideoRow key={youtubeID}>
+            <LiteYouTubeEmbed id={youtubeID} title={name} poster="hqdefault" webp />
             <p>{name}</p>
           </VideoRow>
         ))}

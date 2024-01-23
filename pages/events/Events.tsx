@@ -1,7 +1,9 @@
 import Link from 'next/link';
+
 import { Head, Container, MainSection } from '../../components';
 import { events } from '../../data';
-import EventsContainer, { EventCard, EventImage } from './Events.styled';
+import { EventCard, EventImage } from './Events.styled';
+import { MasonryBrick, MasonryLayout } from '../../components/Masonry';
 
 const formatEventDate = (date: Date) =>
   `${date.toDateString()} • ${date.toTimeString().split(' ')[0].split(':').slice(0, 2).join(':')}`;
@@ -13,12 +15,12 @@ const Events = () => (
       pageTitle="Vermintide - Official Tour Dates"
       pageDescription="Official past and future events and gigs by Vermintide"
     />
-    <MainSection>
-      <EventsContainer>
+    <MainSection style={{ paddingTop: '7em' }}>
+      <MasonryLayout>
         {events.map(({ name, image, date, city, country, venue, fbEvent }) => (
-          <EventCard key={name}>
-            <EventImage src={image} />
-            <div style={{ padding: '16px 16px' }}>
+          <MasonryBrick key={name}>
+            <EventCard>
+              <EventImage src={image} alt={`"${name}" event`} />
               <h2>{name}</h2>
               <time>{formatEventDate(date)}</time>
               <p>
@@ -30,10 +32,10 @@ const Events = () => (
                   <b>Facebook Event</b>
                 </Link>
               )}
-            </div>
-          </EventCard>
+            </EventCard>
+          </MasonryBrick>
         ))}
-      </EventsContainer>
+      </MasonryLayout>
     </MainSection>
   </Container>
 );

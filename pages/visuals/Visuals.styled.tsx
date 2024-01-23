@@ -21,22 +21,3 @@ export const VideoRow = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
 `;
-
-export const VideoIFrame = styled.iframe`
-  background-color: ${({ theme }) => theme.secondary};
-  border-radius: 10px;
-  width: 330px;
-  height: 185px;
-
-  @media (min-width: ${({ theme }) => theme.mobile}) {
-    width: 583px;
-    height: 328px;
-  }
-`;
-
-export const HugeVideoIFrame = styled(VideoIFrame)`
-  @media (min-width: ${({ theme }) => theme.mobile}) {
-    width: 1200px;
-    height: 675px;
-  }
-`;

@@ -1,4 +1,4 @@
-export type AlbumName = 'Meaningless Convulsions' | 'Ashamed Of My Species';
+export type AlbumName = 'Meaningless Convulsions' | 'Ashamed Of My Species' | 'Virus Pedigree';
 
 export interface Word {
   title: string;
@@ -14,6 +14,355 @@ export interface Album {
 }
 
 const sounds: Array<Album> = [
+  {
+    name: 'Virus Pedigree',
+    streamingURL:
+      'https://open.spotify.com/embed/album/6SoOwUhmmvHgQ5KDP3gF2O?utm_source=generator',
+    artworkURL:
+      'https://res.cloudinary.com/dqvimfd8b/image/upload/v1706013868/vermintide/sounds/Virus_Pedigree_-_600.png',
+    purchaseURL: 'https://vermintide.bandcamp.com/album/virus-pedigree',
+    lyrics: [
+      {
+        title: 'Sky Burial',
+        content: `
+Sky
+Burial
+
+Bury me
+In the sky
+Make me be
+One with the Earth
+
+Let nature
+Feast upon
+My useless
+Corpse until I
+
+I am no more
+I am no more
+I am no more
+I am no
+
+Bury me
+In the sky
+Make me be one
+With the Earth
+
+Cemetery real estate
+Buy one now or it’s too late
+Get a pretty tombstone
+Accept death
+      `,
+      },
+      {
+        title: 'Cut By Hitchens’s Razor',
+        content: `
+	
+Cut by
+Hitchens’s razor
+Cut by
+
+Cutting through
+The bullshit
+Unapologetically
+Making you
+Look like fool
+Unapologetically
+
+Cut by
+Hitchens’s razor
+Cut by
+
+Hitchens’s razor
+
+Godless
+I am loud and proud
+You won’t see me begging
+For answers from above
+Godless, loud and proud
+
+Life is too short
+To waste it on God
+Appreciate the nature
+
+With it’s chaos
+And elegance
+Over divine creation
+
+Godless
+I am loud and proud
+You won’t see me begging
+For answers from above
+Godless, loud and proud
+      `,
+      },
+      {
+        title: 'Collectivistic Reproductive System',
+        content: `
+They control your body
+See your as a vessel
+
+Collectivistic
+Reproductive system
+
+Unborn life more important
+Than yours
+
+Collectivistic
+Reproductive system
+Of oppression
+
+Unborn life more important
+Than yours
+
+I will aid
+And abet
+Abortion
+
+They control your body
+See your as a vessel
+
+Collectivistic
+Reproductive system
+      `,
+      },
+      {
+        title: 'Humane Rape',
+        content: `
+Humane slaughter
+Humane rape
+
+Distorted morality
+Stemming from speciesism
+
+Humane slaughter
+Humane rape
+
+Inseminated by hand
+Then bolt to the skull
+
+Raise them to be raped
+Feed them to be slaughtered
+Systematic evil
+Modern day Holocaust
+
+Humane slaughter
+Humane rape
+
+Inseminated by hand
+Then bolt to the skull
+      `,
+      },
+      {
+        title: 'The Consumer Automaton',
+        content: `
+Empty eyes
+Flickering
+Human form
+Misleading
+
+Programmed to
+Do one thing
+Mindlessly
+Consuming
+
+Consume consume
+
+Plastic bags
+Full of shit
+Plastic soul
+So is
+It
+
+Shivers down your spine
+As the plastic eyes
+
+See their reflection
+In the mirror
+
+Consume consume
+
+Mindlessly
+Consuming
+      `,
+      },
+      {
+        title: 'An Open Door',
+        content: `
+Long gone are the days of
+Happily ever after
+
+Beatings as a sign of love
+Gifts of broken nose and jaw
+
+It seems
+The door is open
+When it could not
+Be more closed
+
+Then one sunny day
+When you can’t bare no more
+You close the fucking door
+On his fucking head
+
+It seems
+The door is open
+When it could not
+Be more
+      `,
+      },
+      {
+        title: 'Those Are Walls I Call My Home',
+        content: `
+Those are walls I call my home
+
+Every inch I’ve got to know
+Those are walls I call my home
+
+Come a little
+Bit closer
+I won’t
+Bite
+
+Those are walls I call my home
+Every inch I’ve got
+To know
+
+Know!
+
+Those are walls I call my home
+
+Come a little
+Bit closer
+I won’t
+Bite
+
+Victims of false
+Imprisonment
+
+Futile attempts
+To beat the system
+Which is rotten
+To the core
+      `,
+      },
+      {
+        title: 'Are We Human Or Are We Cancer?',
+        content: `
+Are we human
+Or are we cancer?
+
+The answer
+Is all around
+
+Are we human
+Or are we cancer?
+
+Parasitization
+Death and destruction
+Bloody legacy
+Virus
+Pedigree
+
+Burn it!
+
+The answer
+Is all around
+      `,
+      },
+      {
+        title: 'They Told Me I Did It',
+        content: `
+I see blood
+On my hands
+Even though
+There is none
+
+They told me I did it
+They told me I did it
+
+Lost the faith
+In myself
+Gave in into
+Their lies
+
+I see blood
+On my hands
+Engraved in
+My mind
+
+Corrupted lazy cunts
+Coercing false confessions
+
+Framing the innocent
+
+Letting the real killer
+Roam
+
+They told me I did it
+They told me I did it
+      `,
+      },
+      {
+        title: 'Bring Back The Children',
+        content: `
+Delusional mind
+Appalling war crime
+Nation destruction
+Children abduction
+
+Bring back
+The children
+Bring back
+The children
+
+Fascist ideology
+Fascist methods
+
+Erasing the identity
+Correcting memories
+
+Bring back
+The children
+Bring back
+
+Delusional mind
+Appalling war crime
+Children abduction
+      `,
+      },
+      {
+        title: 'Taste Or Life?',
+        content: `
+Taste or life?
+
+The taste of death
+In your mouth
+
+Taste or life?
+
+Choice you make
+
+Bathing in
+Suffering
+
+The taste of death
+In your mouth
+Rotting flesh
+In your gut
+
+Five minutes of pleasure
+
+Years of mutilation
+
+Taste or life?
+
+Choice you make
+Every motherfucking day
+      `,
+      },
+    ],
+  },
   {
     name: 'Ashamed Of My Species',
     streamingURL:

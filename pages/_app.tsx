@@ -8,6 +8,8 @@ import GlobalStyles from './global';
 import { Burger, Menu } from '../components';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 const VermintideApp = ({ Component, pageProps }: AppProps) => {
   const [open, setOpen] = useState(false);
   const burgerMenuRef = useRef(null);

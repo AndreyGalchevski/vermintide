@@ -6,7 +6,7 @@ const Home = () => (
     <Head
       path=""
       pageTitle="Vermintide - Official Website"
-      pageDescription="Vermintide - Israeli Slamming Grindcore"
+      pageDescription="Vermintide - Israeli DeathGrind"
     />
     <MainSection>
       <div style={{ marginBottom: 10 }}>
