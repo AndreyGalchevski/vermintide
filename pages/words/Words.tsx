@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import Select, { SingleValue, Options, StylesConfig } from 'react-select';
 import { useRouter } from 'next/router';
+import { styled } from 'styled-components';
 
-import { Head, Container, MainSection } from '../../components';
+import { Head, Container, MainSection, Card, MasonryBrick, MasonryLayout } from '../../components';
 import { albums } from '../../data';
 import { AlbumName } from '../../data/albums';
 import theme from '../../utils/theme';
-import { Content } from './Words.styled';
-import { MasonryBrick, MasonryLayout } from '../../components/Masonry';
-import Card from '../../components/Card';
 
 export interface AlbumOption {
   value: AlbumName;
@@ -21,24 +19,7 @@ const options: Options<AlbumOption> = [
   { value: 'Meaningless Convulsions', label: 'Meaningless Convulsions' },
 ];
 
-const selectStyles: StylesConfig<AlbumOption> = {
-  control: (base) => ({
-    ...base,
-    ':hover': { borderColor: theme.accent },
-    ':focus': { borderColor: theme.accent },
-    ':focus-visible': { borderColor: theme.accent },
-    ':focus-within': {
-      borderColor: theme.accent,
-      boxShadow: `0 0 0 1px ${theme.accent}`,
-    },
-  }),
-  option: (base) => ({
-    ...base,
-    backgroundColor: theme.accent,
-  }),
-};
-
-const Words = () => {
+export default function Words() {
   const router = useRouter();
 
   const [selectedAlbum, setSelectedAlbum] = useState<SingleValue<AlbumOption>>(
@@ -90,6 +71,26 @@ const Words = () => {
       </MainSection>
     </Container>
   );
-};
+}
 
-export default Words;
+const Content = styled.pre`
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+`;
+
+const selectStyles: StylesConfig<AlbumOption> = {
+  control: (base) => ({
+    ...base,
+    ':hover': { borderColor: theme.accent },
+    ':focus': { borderColor: theme.accent },
+    ':focus-visible': { borderColor: theme.accent },
+    ':focus-within': {
+      borderColor: theme.accent,
+      boxShadow: `0 0 0 1px ${theme.accent}`,
+    },
+  }),
+  option: (base) => ({
+    ...base,
+    backgroundColor: theme.accent,
+  }),
+};

@@ -7,12 +7,6 @@ import InstagramIcon from '../icons/InstagramIcon';
 import SpotifyIcon from '../icons/SpotifyIcon';
 import YouTubeIcon from '../icons/YouTubeIcon';
 
-export const LinksContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100px;
-`;
-
 interface SocialLink {
   url: string;
   Icon: FunctionComponent<SVGProps<SVGPathElement>>;
@@ -52,21 +46,27 @@ interface Props {
   iconSize: number;
 }
 
-const Social: FunctionComponent<Props> = ({ variant, iconSize }) => (
-  <LinksContainer>
-    {socialLinks.map(({ url, Icon, altText }) => (
-      <a
-        key={url}
-        href={url}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={altText}
-        style={{ width: iconSize, margin: 15 }}
-      >
-        <Icon fill={variant === 'dark' ? 'black' : 'white'} width={iconSize} height={iconSize} />
-      </a>
-    ))}
-  </LinksContainer>
-);
+export default function Social({ variant, iconSize }: Props) {
+  return (
+    <LinksContainer>
+      {socialLinks.map(({ url, Icon, altText }) => (
+        <a
+          key={url}
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={altText}
+          style={{ width: iconSize, margin: 15 }}
+        >
+          <Icon fill={variant === 'dark' ? 'black' : 'white'} width={iconSize} height={iconSize} />
+        </a>
+      ))}
+    </LinksContainer>
+  );
+}
 
-export default Social;
+const LinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100px;
+`;
