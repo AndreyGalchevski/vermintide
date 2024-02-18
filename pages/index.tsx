@@ -6,8 +6,8 @@ export default function Home() {
     <Container>
       <Head
         path=""
-        pageTitle="Vermintide - Official Website"
-        pageDescription="Vermintide - Israeli DeathGrind"
+        pageTitle="Vermintide - Official Band Website"
+        pageDescription="Vermintide - Israeli DeathGrind Band"
       />
       <MainSection>
         <div style={{ marginBottom: 10 }}>

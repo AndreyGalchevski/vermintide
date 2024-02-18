@@ -23,7 +23,7 @@ export default function Head({ path, pageTitle, pageDescription }: Props) {
       <meta name="og:description" content={pageDescription} />
       <meta
         name="og:image"
-        content="https://res.cloudinary.com/dqvimfd8b/image/upload/v1618847921/vermintide/og-image.png"
+        content="https://res.cloudinary.com/dqvimfd8b/image/upload/v1708280760/vermintide/IMG_20230923_190457_469_4.jpg"
       />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={pageTitle} />
