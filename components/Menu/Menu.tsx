@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Social from '../Social';
 import ExternalLinkIcon from '../icons/ExternalLinkIcon';
 
-const merchandiseShopURL = 'https://shop.vermintide.band';
+const merchandiseShopURL = 'https://vermintide.bandcamp.com/merch';
 
 interface Props {
   open: boolean;
