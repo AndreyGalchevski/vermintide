@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import { Head, Social, Container, MainSection } from '../components';
-import Logo from '../components/Logo';
+import logo from '../public/logo.webp';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       />
       <MainSection>
         <div style={{ marginBottom: 10 }}>
-          <Logo />
+          <Image priority src={logo} alt="Vermintide band logo" width={400} />
         </div>
         <Social variant="dark" iconSize={35} />
       </MainSection>
